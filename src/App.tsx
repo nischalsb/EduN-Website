@@ -11,6 +11,7 @@ import Donate from './pages/Donate';
 import About from './pages/About';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
+import ProgramDetail from './pages/ProgramDetail';
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/programs" element={<Programs />} />
+                <Route path="/programs/:id" element={<ProgramDetail />} />
                 <Route path="/impact" element={<Impact />} />
                 <Route path="/get-involved" element={<GetInvolved />} />
                 <Route path="/donate" element={<Donate />} />

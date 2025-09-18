@@ -1,25 +1,53 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Users, BookOpen, ArrowRight } from 'lucide-react';
+import { Users, BookOpen, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import type { Program } from '../types/program';
 
 const programsData: Program[] = [
     {
       id: 1,
-      title: "Youth Empowerment Summit",
-      description: "Annual youth summit focusing on leadership, opportunities, and social change in Nepal.",
+      title: "Nepal ma Abasar nai xaina - NMAC",
+      description: "A comprehensive youth empowerment program focusing on opportunities and leadership development in Nepal.",
       icon: Users,
       impact: "500+ youth participants annually",
       category: "leadership",
-      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      image: "/images/1. nmbc- Nepal ma Abasar nai xaina/nmac11.webp",
       details: [
         "Keynote speeches from industry leaders",
         "Panel discussions on youth opportunities",
         "Networking sessions with professionals",
         "Workshops on skill development"
       ],
-      year: "2016-Present"
+      year: "2016-Present",
+      fullDescription: "Nepal ma Abasar nai xaina (NMAC) is our flagship youth empowerment program that brings together young leaders from across Nepal to discuss opportunities, challenges, and solutions for the country's development. The program features interactive workshops, panel discussions, and networking opportunities.",
+      location: "Kathmandu, Nepal",
+      date: "Annual Event",
+      events: [
+        {
+          id: 'nmac-2016',
+          title: 'NMAC 2016 - Inaugural Event',
+          description: 'The first edition of Nepal ma Abasar nai xaina, bringing together youth leaders from across the country.',
+          date: '2016',
+          images: [
+            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac11.webp',
+            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac12.webp',
+            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac13.webp'
+          ]
+        },
+        {
+          id: 'nmac-2017',
+          title: 'NMAC 2017 - Expanding Reach',
+          description: 'Second edition with increased participation and expanded program offerings.',
+          date: '2017',
+          images: [
+            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac21.webp',
+            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac22.webp',
+            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac23.webp',
+            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac24.webp'
+          ]
+        }
+      ]
     },
     {
       id: 2,
@@ -55,9 +83,9 @@ const programsData: Program[] = [
           description: 'Grand opening of the new library facility with local officials and community members in attendance.',
           date: 'May 24, 2018',
           images: [
-            './public/images/Library Project- Jajarkot/1.webp',
-            './public/images/Library Project- Jajarkot/2.webp',
-            './public/images/Library Project- Jajarkot/3.webp'
+            '/images/Library Project- Jajarkot/1.webp',
+            '/images/Library Project- Jajarkot/2.webp',
+            '/images/Library Project- Jajarkot/3.webp'
           ]
         },
         {
@@ -92,67 +120,134 @@ const programsData: Program[] = [
     },
     {
       id: 3,
-      title: "Book Donation Drive",
-      description: "Collecting and distributing books to schools and community centers across Nepal.",
-      icon: BookOpen,
-      impact: "10,000+ books donated",
-      category: "education",
-      image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Nepal ma Abasar nai xaina - NMBC",
+      description: "A follow-up youth empowerment program building on the success of NMAC, focusing on community building and social change.",
+      icon: Users,
+      impact: "300+ youth participants",
+      category: "leadership",
+      image: "/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc1.webp",
       details: [
-        "Textbooks and reference materials",
-        "Fiction and non-fiction books",
-        "Educational resources for all ages",
-        "Library setup support"
+        "Community building workshops",
+        "Social change initiatives",
+        "Youth leadership development",
+        "Networking and collaboration"
       ],
-      year: "2020-Present"
+      year: "2017-2018",
+      fullDescription: "Nepal ma Abasar nai xaina - NMBC (Nepal ma Abasar nai xaina Community) was a continuation of our youth empowerment efforts, focusing on building stronger communities and fostering social change through youth engagement.",
+      location: "Kathmandu, Nepal",
+      date: "2017-2018",
+      events: [
+        {
+          id: 'nmbc-2017',
+          title: 'NMBC 2017 - Community Building',
+          description: 'Focus on community building and youth engagement in social change.',
+          date: '2017',
+          images: [
+            '/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc1.webp',
+            '/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc2.webp',
+            '/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc3.webp',
+            '/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc4.webp'
+          ]
+        }
+      ]
     },
     {
       id: 4,
-      title: "Share Your Story Initiative",
-      description: "A platform for youth to share their experiences and inspire others through storytelling.",
-      icon: Users,
-      impact: "50+ stories shared",
-      category: "community",
-      image: "https://images.unsplash.com/photo-1505373876331-ff89baa8f9d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Library Project - Dadeldhura",
+      description: "Established a comprehensive learning center in Dadeldhura, providing access to books, technology, and educational resources.",
+      icon: BookOpen,
+      impact: "1500+ books and 3 computers donated",
+      category: "education",
+      image: "/images/Library Project Dadeldhura/relib1.webp",
       details: [
-        "Storytelling workshops",
-        "Digital publication platform",
-        "Community sharing events",
-        "Mentorship opportunities"
+        "Donated 1500+ books and 3 computers",
+        "Established modern library facility",
+        "Conducted digital literacy training",
+        "Provided educational resources and materials"
       ],
-      year: "2022-Present"
+      year: "2019",
+      fullDescription: "The Library Project in Dadeldhura was another successful initiative to improve educational infrastructure in rural Nepal. We established a comprehensive learning center with modern facilities and resources.",
+      location: "Dadeldhura, Nepal",
+      date: "2019",
+      events: [
+        {
+          id: 'dadeldhura-setup',
+          title: 'Library Setup and Inauguration',
+          description: 'Setting up the new library facility with books, computers, and educational resources.',
+          date: '2019',
+          images: [
+            '/images/Library Project Dadeldhura/relib1.webp',
+            '/images/Library Project Dadeldhura/relib2.webp',
+            '/images/Library Project Dadeldhura/relib3.webp',
+            '/images/Library Project Dadeldhura/relib4.webp'
+          ]
+        }
+      ]
     },
     {
       id: 5,
-      title: "Career Guidance Program",
-      description: "Helping Nepali youth explore career opportunities and develop necessary skills.",
-      icon: GraduationCap,
-      impact: "1000+ students guided",
-      category: "career",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      title: "Gossip Stories Initiative",
+      description: "A storytelling platform that shares inspiring stories and experiences from youth across Nepal, promoting positive narratives and community building.",
+      icon: Users,
+      impact: "100+ stories shared",
+      category: "community",
+      image: "/images/Gossip Stories /gs1.webp",
       details: [
-        "Career counseling sessions",
-        "Skill development workshops",
-        "Industry expert interactions",
-        "Resume and interview preparation"
+        "Story collection and curation",
+        "Digital storytelling platform",
+        "Community sharing events",
+        "Youth voice amplification"
       ],
-      year: "Ongoing"
+      year: "2020-Present",
+      fullDescription: "Gossip Stories is our innovative storytelling initiative that captures and shares the inspiring experiences of young people across Nepal. Through this platform, we amplify youth voices and create positive narratives that inspire others.",
+      location: "Various locations across Nepal",
+      date: "2020-Present",
+      events: [
+        {
+          id: 'gossip-stories-launch',
+          title: 'Gossip Stories Launch Event',
+          description: 'Launch of the storytelling platform with community sharing and story collection.',
+          date: '2020',
+          images: [
+            '/images/Gossip Stories /gs1.webp',
+            '/images/Gossip Stories /gs2.webp',
+            '/images/Gossip Stories /gs3.webp',
+            '/images/Gossip Stories /gs4.webp',
+            '/images/Gossip Stories /gs5.webp'
+          ]
+        }
+      ]
     },
     {
       id: 6,
-      title: "Digital Literacy Program",
-      description: "Empowering youth with essential digital skills for the modern workforce.",
+      title: "Library Project - Rukum",
+      description: "Established a learning center in Rukum, providing educational resources and technology access to the local community.",
       icon: BookOpen,
-      impact: "500+ youth trained",
+      impact: "1000+ books and 2 computers donated",
       category: "education",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      image: "/images/Library Project- Rukum/relib5.webp",
       details: [
-        "Basic computer skills training",
-        "Internet and social media literacy",
-        "Digital tools and software training",
-        "Online safety and security"
+        "Donated 1000+ books and 2 computers",
+        "Established community learning center",
+        "Conducted educational workshops",
+        "Provided digital literacy training"
       ],
-      year: "Ongoing"
+      year: "2021",
+      fullDescription: "The Library Project in Rukum was our initiative to bring educational resources and technology to another rural community in Nepal. We established a learning center that serves as a hub for education and community development.",
+      location: "Rukum, Nepal",
+      date: "2021",
+      events: [
+        {
+          id: 'rukum-setup',
+          title: 'Library Setup and Community Engagement',
+          description: 'Setting up the learning center and engaging with the local community.',
+          date: '2021',
+          images: [
+            '/images/Library Project- Rukum/1a.webp',
+            '/images/Library Project- Rukum/relib5.webp'
+          ]
+        }
+      ]
     }
   ];
 
