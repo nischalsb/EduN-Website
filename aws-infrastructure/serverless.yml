@@ -1,0 +1,102 @@
+service: educatenepal-forms
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  environment:
+    DYNAMODB_TABLE: ${self:service}-${self:provider.stage}-forms
+    SES_FROM_EMAIL: noreply@educatenepal.org
+    SES_TO_EMAIL: info@educatenepal.org
+
+functions:
+  # Contact Form Handler
+  contactForm:
+    handler: handlers/contact.handler
+    events:
+      - http:
+          path: /contact
+          method: post
+          cors: true
+
+  # Volunteer Application Handler
+  volunteerForm:
+    handler: handlers/volunteer.handler
+    events:
+      - http:
+          path: /volunteer
+          method: post
+          cors: true
+
+  # Donation Form Handler
+  donationForm:
+    handler: handlers/donation.handler
+    events:
+      - http:
+          path: /donation
+          method: post
+          cors: true
+
+resources:
+  Resources:
+    # DynamoDB Table for storing form submissions
+    FormsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.DYNAMODB_TABLE}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+          - AttributeName: formType
+            AttributeType: S
+          - AttributeName: createdAt
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        GlobalSecondaryIndexes:
+          - IndexName: FormTypeIndex
+            KeySchema:
+              - AttributeName: formType
+                KeyType: HASH
+              - AttributeName: createdAt
+                KeyType: RANGE
+            Projection:
+              ProjectionType: ALL
+        BillingMode: PAY_PER_REQUEST
+
+    # IAM Role for Lambda functions
+    LambdaExecutionRole:
+      Type: AWS::IAM::Role
+      Properties:
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Principal:
+                Service: lambda.amazonaws.com
+              Action: sts:AssumeRole
+        Policies:
+          - PolicyName: DynamoDBAccess
+            PolicyDocument:
+              Version: '2012-10-17'
+              Statement:
+                - Effect: Allow
+                  Action:
+                    - dynamodb:PutItem
+                    - dynamodb:GetItem
+                    - dynamodb:Query
+                    - dynamodb:Scan
+                  Resource: !GetAtt FormsTable.Arn
+          - PolicyName: SESAccess
+            PolicyDocument:
+              Version: '2012-10-17'
+              Statement:
+                - Effect: Allow
+                  Action:
+                    - ses:SendEmail
+                    - ses:SendRawEmail
+                  Resource: '*'
+
+plugins:
+  - serverless-offline

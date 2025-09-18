@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { submitContactForm } from '../services/api';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -16,6 +17,8 @@ type ContactForm = z.infer<typeof contactSchema>;
 
 const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactForm>({
     resolver: zodResolver(contactSchema),
@@ -65,10 +68,21 @@ const Contact: React.FC = () => {
     },
   ];
 
-  const onSubmit = (data: ContactForm) => {
-    console.log('Contact form submission:', data);
-    setIsSubmitted(true);
-    reset();
+  const onSubmit = async (data: ContactForm) => {
+    setIsSubmitting(true);
+    setSubmitError(null);
+    
+    try {
+      const result = await submitContactForm(data);
+      console.log('Contact form submitted successfully:', result);
+      setIsSubmitted(true);
+      reset();
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      setSubmitError('Failed to send message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // const fadeInUp = {
@@ -272,11 +286,27 @@ const Contact: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full btn-primary flex items-center justify-center"
+                  disabled={isSubmitting}
+                  className="w-full btn-primary flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send className="h-5 w-5 mr-2" />
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="h-5 w-5 mr-2" />
+                      Send Message
+                    </>
+                  )}
                 </button>
+                
+                {submitError && (
+                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <p className="text-red-600 text-sm">{submitError}</p>
+                  </div>
+                )}
               </form>
             </motion.div>
 
