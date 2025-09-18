@@ -67,11 +67,11 @@ const Impact: React.FC = () => {
     { icon: MapPin, number: "25", label: "Communities Reached", color: "text-purple-600" }
   ];
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
+  // const fadeInUp = {
+  //   initial: { opacity: 0, y: 60 },
+  //   animate: { opacity: 1, y: 0 },
+  //   transition: { duration: 0.6 }
+  // };
 
   return (
     <div className="min-h-screen bg-gray-50">

@@ -71,11 +71,11 @@ const Contact: React.FC = () => {
     reset();
   };
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
+  // const fadeInUp = {
+  //   initial: { opacity: 0, y: 60 },
+  //   animate: { opacity: 1, y: 0 },
+  //   transition: { duration: 0.6 }
+  // };
 
   if (isSubmitted) {
     return (
@@ -291,7 +291,7 @@ const Contact: React.FC = () => {
                 Our Offices
               </h3>
               <div className="space-y-6">
-                {offices.map((office, index) => (
+                {offices.map((office) => (
                   <div key={office.city} className="bg-white p-6 rounded-lg shadow-lg">
                     <div className="flex items-start justify-between mb-3">
                       <h4 className="text-xl font-semibold text-gray-900">

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, GraduationCap, School, Users, Calendar } from 'lucide-react';
+import { GraduationCap, School, Users, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const STATS = {
@@ -13,11 +13,11 @@ const STATS = {
 
 const Home = () => {
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
+  // const fadeInUp = {
+  //   initial: { opacity: 0, y: 60 },
+  //   animate: { opacity: 1, y: 0 },
+  //   transition: { duration: 0.6 }
+  // };
 
   const partners = [
     { name: "Morgridge Center for Public Service", logo: "/images/morgridge.png" },

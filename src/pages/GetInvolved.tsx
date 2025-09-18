@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Heart, Users, Calendar, MapPin, Mail, Phone, CheckCircle } from 'lucide-react';
+import { Heart, Users, Calendar, MapPin, Mail, CheckCircle } from 'lucide-react';
 
 const volunteerSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -21,7 +21,7 @@ const GetInvolved: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
 
-  const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<VolunteerForm>({
+  const { register, handleSubmit, formState: { errors }, setValue } = useForm<VolunteerForm>({
     resolver: zodResolver(volunteerSchema),
     defaultValues: {
       skills: [],
@@ -74,11 +74,11 @@ const GetInvolved: React.FC = () => {
     setIsSubmitted(true);
   };
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
+  // const fadeInUp = {
+  //   initial: { opacity: 0, y: 60 },
+  //   animate: { opacity: 1, y: 0 },
+  //   transition: { duration: 0.6 }
+  // };
 
   if (isSubmitted) {
     return (

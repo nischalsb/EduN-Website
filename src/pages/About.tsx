@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import type { Variants } from 'framer-motion';
 import { Target, Globe, Heart, Lightbulb } from 'lucide-react';
 
 const fadeInUp = {
@@ -49,12 +48,11 @@ const About: React.FC = () => {
     { year: "2024", event: "Celebrating 2,500+ students impacted and 45 schools supported" }
   ];
 
-  const partners = [
-    { name: "Morgridge Center for Public Service", logo: "/images/morgridge.png" },
-    { name: "Budhanilkantha School", logo: "/images/bnks.png" },
-    { name: "Merosikshal", logo: "/images/merosiksha.png" },
-  
-  ];
+  // const partners = [
+  //   { name: "Morgridge Center for Public Service", logo: "/images/morgridge.png" },
+  //   { name: "Budhanilkantha School", logo: "/images/bnks.png" },
+  //   { name: "Merosikshal", logo: "/images/merosiksha.png" },
+  // ];
 
 
   return (

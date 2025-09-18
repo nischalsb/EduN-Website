@@ -74,11 +74,11 @@ const Donate: React.FC = () => {
     alert(`Thank you for your ${amount} USD donation via ${selectedPayment}! This is a demo - no actual payment was processed.`);
   };
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
+  // const fadeInUp = {
+  //   initial: { opacity: 0, y: 60 },
+  //   animate: { opacity: 1, y: 0 },
+  //   transition: { duration: 0.6 }
+  // };
 
   return (
     <div className="min-h-screen bg-gray-50">
