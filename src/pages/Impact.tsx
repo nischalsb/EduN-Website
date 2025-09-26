@@ -6,25 +6,25 @@ const Impact: React.FC = () => {
   const stories = [
     {
       id: 1,
-      title: "From Darkness to Light: X's Journey",
-      excerpt: "How a scholarship changed everything for a young girl in rural Nepal.",
-      content: "Sita Tamang was just 12 when her parents considered pulling her out of school to help with farm work. Living in a remote village in Sindhupalchok, her family struggled to afford school supplies and uniforms. Through our scholarship program, Sita not only completed her education but became the first in her village to attend university. Today, she's studying to become a teacher, determined to give back to her community.",
-      image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      author: "Sita Tamang",
-      date: "March 2024",
+      title: "Coding Confidence with the IT Training Program",
+      excerpt: "How a It training helped me identify my love for coding",
+      content: "I had the opportunity to be part of the WIF IT Training Program organized in collaboration with EduN (Educate Nepal Initiative). This training was a great experience for me because I learned the basics of HTML, CSS, JavaScript, and Python in a structured and easy-to-follow way.\n\nThe program not only gave me technical knowledge but also helped me build confidence in programming. I especially liked the hands-on practice sessions where we created small projects, which made learning more fun and practical.\n\nOverall, this training has improved my skills, motivated me to explore coding further, and opened new opportunities for my future in the IT field. Now, I am excited to move forward by building small projects like mobile apps and websites while also balancing my school studies.",
+      image: "",
+      author: "Pravat Badi",
+      date: "September 2025",
       category: "Education",
-      location: "Sindhupalchok District"
+      location: "Banke District"
     },
     {
       id: 2,
-      title: "Building Dreams: The Shree Saraswati School Transformation",
-      excerpt: "How infrastructure development changed an entire community's future.",
-      content: "The Shree Saraswati School in Dolakha was on the verge of closure. With crumbling walls, no electricity, and a leaking roof, only 23 students remained. Our infrastructure program completely rebuilt the school, adding solar panels, a computer lab, and a library. Today, over 150 students attend, and the school has become a beacon of hope for the entire district.",
-      image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      author: "Ram Bahadur Shrestha, Principal",
-      date: "January 2024",
-      category: "Infrastructure",
-      location: "Dolakha District"
+      title: "The Best Training Program I’ve Ever Joined",
+      excerpt: "How the IT training program helped me restart and grow my skills",
+      content: "The training program is the best program I’ve ever participated in. It gave me the chance to restart and grow my skills. I had smart companions to learn with and a very supportive teacher who always helped me improve my coding skills. I really loved this experience, and I want to sincerely thank everyone for organizing this program.",
+      image: "/images/students/5E23314C-04E7-4BC8-8EE9-29E3970CBECE.png",
+      author: "Gurans Thakuril",
+      date: "September 2025",
+      category: "Education",
+      location: "Dailekh District"
     },
     {
       id: 3,

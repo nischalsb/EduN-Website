@@ -100,20 +100,6 @@ const Team: React.FC = () => {
     }
   ];
 
-  const advisors = [
-    {
-      name: "Prof. Ram Khadka",
-      role: "Education Policy Advisor",
-      bio: "Former Secretary of Education, Government of Nepal. 30+ years in education policy and administration.",
-      image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      name: "Dr. Jennifer Walsh",
-      role: "International Development Advisor",
-      bio: "Former Country Director for Room to Read Nepal. Expert in scaling education programs in developing countries.",
-      image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-    }
-  ];
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -302,58 +288,7 @@ const Team: React.FC = () => {
         </div>
       </section>
 
-      {/* Advisory Board */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Advisory Board
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Distinguished leaders who provide strategic guidance and expertise 
-              to help us achieve our mission more effectively.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {advisors.map((advisor, index) => (
-              <motion.div
-                key={advisor.name}
-                className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className="flex items-start space-x-4">
-                  <img
-                    src={advisor.image}
-                    alt={advisor.name}
-                    className="w-20 h-20 rounded-full object-cover flex-shrink-0"
-                  />
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-1">
-                      {advisor.name}
-                    </h3>
-                    <p className="text-primary-600 font-medium mb-3">
-                      {advisor.role}
-                    </p>
-                    <p className="text-gray-600 leading-relaxed">
-                      {advisor.bio}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Join Our Team */}
       <section className="bg-white section-padding">
