@@ -49,9 +49,9 @@ const About: React.FC = () => {
   ];
 
   // const partners = [
-  //   { name: "Morgridge Center for Public Service", logo: "/EduN-Website/images/morgridge.png" },
-  //   { name: "Budhanilkantha School", logo: "/EduN-Website/images/bnks.png" },
-  //   { name: "Merosikshal", logo: "/EduN-Website/images/merosiksha.png" },
+  //   { name: "Morgridge Center for Public Service", logo: "/images/morgridge.png" },
+  //   { name: "Budhanilkantha School", logo: "/images/bnks.png" },
+  //   { name: "Merosikshal", logo: "/images/merosiksha.png" },
   // ];
 
 
