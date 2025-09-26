@@ -16,7 +16,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/images/logo.png" 
+              src="/EduN-Website/images/logo.png" 
               alt={`${SITE_CONFIG.name} Logo`}
               className="h-10 w-auto"
             />

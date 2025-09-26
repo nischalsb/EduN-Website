@@ -12,7 +12,7 @@ const programsData: Program[] = [
       icon: Users,
       impact: "500+ youth participants annually",
       category: "leadership",
-      image: "/images/1. nmbc- Nepal ma Abasar nai xaina/nmac11.webp",
+      image: "/EduN-Website/EduN-Website/images/1. nmbc- Nepal ma Abasar nai xaina/nmac11.webp",
       details: [
         "Keynote speeches from industry leaders",
         "Panel discussions on youth opportunities",
@@ -30,9 +30,9 @@ const programsData: Program[] = [
           description: 'The first edition of Nepal ma Abasar nai xaina, bringing together youth leaders from across the country.',
           date: '2016',
           images: [
-            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac11.webp',
-            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac12.webp',
-            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac13.webp'
+            '/EduN-Website/images/1. nmbc- Nepal ma Abasar nai xaina/nmac11.webp',
+            '/EduN-Website/images/1. nmbc- Nepal ma Abasar nai xaina/nmac12.webp',
+            '/EduN-Website/images/1. nmbc- Nepal ma Abasar nai xaina/nmac13.webp'
           ]
         },
         {
@@ -41,10 +41,10 @@ const programsData: Program[] = [
           description: 'Second edition with increased participation and expanded program offerings.',
           date: '2017',
           images: [
-            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac21.webp',
-            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac22.webp',
-            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac23.webp',
-            '/images/1. nmbc- Nepal ma Abasar nai xaina/nmac24.webp'
+            '/EduN-Website/images/1. nmbc- Nepal ma Abasar nai xaina/nmac21.webp',
+            '/EduN-Website/images/1. nmbc- Nepal ma Abasar nai xaina/nmac22.webp',
+            '/EduN-Website/images/1. nmbc- Nepal ma Abasar nai xaina/nmac23.webp',
+            '/EduN-Website/images/1. nmbc- Nepal ma Abasar nai xaina/nmac24.webp'
           ]
         }
       ]
@@ -83,9 +83,9 @@ const programsData: Program[] = [
           description: 'Grand opening of the new library facility with local officials and community members in attendance.',
           date: 'May 24, 2018',
           images: [
-            '/images/Library Project- Jajarkot/1.webp',
-            '/images/Library Project- Jajarkot/2.webp',
-            '/images/Library Project- Jajarkot/3.webp'
+            '/EduN-Website/images/Library Project- Jajarkot/1.webp',
+            '/EduN-Website/images/Library Project- Jajarkot/2.webp',
+            '/EduN-Website/images/Library Project- Jajarkot/3.webp'
           ]
         },
         {
@@ -94,8 +94,8 @@ const programsData: Program[] = [
           description: 'Distribution of over 2000 books to the school library and students.',
           date: 'May 25, 2018',
           images: [
-            '/images/Library Project- Jajarkot/4.webp',
-            '/images/Library Project- Jajarkot/5.webp'
+            '/EduN-Website/images/Library Project- Jajarkot/4.webp',
+            '/EduN-Website/images/Library Project- Jajarkot/5.webp'
           ]
         },
         {
@@ -104,9 +104,9 @@ const programsData: Program[] = [
           description: 'Installation and setup of the new computer lab with internet connectivity.',
           date: 'May 26, 2018',
           images: [
-            '/images/Library Project- Jajarkot/6.webp',
-            '/images/Library Project- Jajarkot/7.webp',
-            '/images/Library Project- Jajarkot/8.webp'
+            '/EduN-Website/images/Library Project- Jajarkot/6.webp',
+            '/EduN-Website/images/Library Project- Jajarkot/7.webp',
+            '/EduN-Website/images/Library Project- Jajarkot/8.webp'
           ]
         }
       ],
@@ -125,7 +125,7 @@ const programsData: Program[] = [
       icon: Users,
       impact: "300+ youth participants",
       category: "leadership",
-      image: "/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc1.webp",
+      image: "/EduN-Website/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc1.webp",
       details: [
         "Community building workshops",
         "Social change initiatives",
@@ -143,10 +143,10 @@ const programsData: Program[] = [
           description: 'Focus on community building and youth engagement in social change.',
           date: '2017',
           images: [
-            '/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc1.webp',
-            '/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc2.webp',
-            '/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc3.webp',
-            '/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc4.webp'
+            '/EduN-Website/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc1.webp',
+            '/EduN-Website/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc2.webp',
+            '/EduN-Website/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc3.webp',
+            '/EduN-Website/images/2. nmbc- Nepal ma Abasar nai xaina/nmbc4.webp'
           ]
         }
       ]
@@ -158,7 +158,7 @@ const programsData: Program[] = [
       icon: BookOpen,
       impact: "1500+ books and 3 computers donated",
       category: "education",
-      image: "/images/Library Project Dadeldhura/relib1.webp",
+      image: "/EduN-Website/images/Library Project Dadeldhura/relib1.webp",
       details: [
         "Donated 1500+ books and 3 computers",
         "Established modern library facility",
@@ -176,10 +176,10 @@ const programsData: Program[] = [
           description: 'Setting up the new library facility with books, computers, and educational resources.',
           date: '2019',
           images: [
-            '/images/Library Project Dadeldhura/relib1.webp',
-            '/images/Library Project Dadeldhura/relib2.webp',
-            '/images/Library Project Dadeldhura/relib3.webp',
-            '/images/Library Project Dadeldhura/relib4.webp'
+            '/EduN-Website/images/Library Project Dadeldhura/relib1.webp',
+            '/EduN-Website/images/Library Project Dadeldhura/relib2.webp',
+            '/EduN-Website/images/Library Project Dadeldhura/relib3.webp',
+            '/EduN-Website/images/Library Project Dadeldhura/relib4.webp'
           ]
         }
       ]
@@ -191,7 +191,7 @@ const programsData: Program[] = [
       icon: Users,
       impact: "100+ stories shared",
       category: "community",
-      image: "/images/Gossip Stories /gs1.webp",
+      image: "/EduN-Website/images/Gossip Stories /gs1.webp",
       details: [
         "Story collection and curation",
         "Digital storytelling platform",
@@ -209,11 +209,11 @@ const programsData: Program[] = [
           description: 'Launch of the storytelling platform with community sharing and story collection.',
           date: '2020',
           images: [
-            '/images/Gossip Stories /gs1.webp',
-            '/images/Gossip Stories /gs2.webp',
-            '/images/Gossip Stories /gs3.webp',
-            '/images/Gossip Stories /gs4.webp',
-            '/images/Gossip Stories /gs5.webp'
+            '/EduN-Website/images/Gossip Stories /gs1.webp',
+            '/EduN-Website/images/Gossip Stories /gs2.webp',
+            '/EduN-Website/images/Gossip Stories /gs3.webp',
+            '/EduN-Website/images/Gossip Stories /gs4.webp',
+            '/EduN-Website/images/Gossip Stories /gs5.webp'
           ]
         }
       ]
@@ -225,7 +225,7 @@ const programsData: Program[] = [
       icon: BookOpen,
       impact: "1000+ books and 2 computers donated",
       category: "education",
-      image: "/images/Library Project- Rukum/relib5.webp",
+      image: "/EduN-Website/images/Library Project- Rukum/relib5.webp",
       details: [
         "Donated 1000+ books and 2 computers",
         "Established community learning center",
@@ -243,8 +243,8 @@ const programsData: Program[] = [
           description: 'Setting up the learning center and engaging with the local community.',
           date: '2021',
           images: [
-            '/images/Library Project- Rukum/1a.webp',
-            '/images/Library Project- Rukum/relib5.webp'
+            '/EduN-Website/images/Library Project- Rukum/1a.webp',
+            '/EduN-Website/images/Library Project- Rukum/relib5.webp'
           ]
         }
       ]

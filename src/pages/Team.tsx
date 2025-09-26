@@ -27,7 +27,7 @@ const Team: React.FC = () => {
       name: "Dhirendra Acharya",
       role: "President",
       bio: "President of the Education Nepal Initiative (EduN) with a strong academic background including an MBA at Global College. His educational journey began at Xavier International School, followed by studies at Caribbean College and Brooklyn College, culminating in a Bachelor's in Social Work (B.S.W.). Has served as a member secretary under the Ministry of Youth and Sports' Youth and Self-Employment Fund.",
-      image: "/images/president.jpg",
+      image: "/EduN-Website/images/president.jpg",
       linkedin: "#",
       email: "dhirendra@edunep.org",
       location: "Kathmandu, Nepal"
@@ -36,7 +36,7 @@ const Team: React.FC = () => {
       name: "Tilak Dhital",
       role: "Founder, Vice President",
       bio: "Emerging leader in education, finance, and entrepreneurship with over six years of experience. Co-founder and Financial Head at Digital Learning Nepal - MeroSiksha. Certified ICT Smart Board Trainer and co-founder of Budhanilkantha Education Services. Recipient of the Global Students Entrepreneurship Award 2023 and recognized as an Emerging Leader in the Nepal Youth Young Entrepreneurship Award 2024.",
-      image: "/images/tilak_new.jpg",
+      image: "/EduN-Website/images/tilak_new.jpg",
       linkedin: "#",
       email: "tilak@edunep.org",
       location: "Kathmandu, Nepal"
@@ -48,7 +48,7 @@ const Team: React.FC = () => {
       name: "Nischal Singh Bista",
       role: "Program Coordinator",
       bio: "A social, curious, and ambitious individual who has learned about the reality and needs of society through this organization. Committed to ensuring programs are well-planned, executed effectively, and continuously improved for success. Enjoys being part of a platform that showcases work and provides abundant learning opportunities.",
-      image: "/images/nischal.jpeg",
+      image: "/EduN-Website/images/nischal.jpeg",
       linkedin: "#",
       email: "nischal@edunep.org",
       location: "Kathmandu, Nepal"
@@ -57,7 +57,7 @@ const Team: React.FC = () => {
       name: "Bibhas Parajuli",
       role: "Joint Secretary",
       bio: "Aspiring student of Bachelors in Development Studies (BDevS) at National College. Has been involved in social and development work for the past 3 years, with a focus on sustainable development, quality education, and research. Passionate about creating positive change through education and community development initiatives.",
-      image: "/images/logo.png",
+      image: "/EduN-Website/images/logo.png",
       linkedin: "#",
       email: "bibhas@edunep.org",
       location: "Kathmandu, Nepal"
@@ -66,7 +66,7 @@ const Team: React.FC = () => {
       name: "Kussum Ghimire",
       role: "Executive Member",
       bio: "An upbeat, self-motivated team player with excellent communication skills and a passion for social work. Enjoys reading, writing, singing, and sketching. Has worked in the field of menstrual health awareness and organized various fundraising, blood donation, and educational events. Committed to helping young minds grow through educational and social empowerment programs.",
-      image: "/images/logo.png",
+      image: "/EduN-Website/images/logo.png",
       linkedin: "#",
       email: "kussum@edunep.org",
       location: "Kathmandu, Nepal"
@@ -75,7 +75,7 @@ const Team: React.FC = () => {
       name: "Sulav Khanal",
       role: "Executive Member",
       bio: "Visionary leader dedicated to transforming education through digital technology. Co-Founder of MeroSiksha, having trained over 5,000 students and teachers in digital learning practices. Led a successful $8,000 fundraising campaign for a government school in Rimuwa, Gulmi, and spearheaded programs to support widows in western Nepal. Passionate public speaker on leadership and digital education.",
-      image: "/images/sulav.jpg",
+      image: "/EduN-Website/images/sulav.jpg",
       linkedin: "#",
       email: "sulav@edunep.org",
       location: "Kathmandu, Nepal"
@@ -84,7 +84,7 @@ const Team: React.FC = () => {
       name: "Birendra Madai",
       role: "Founder, Executive Member",
       bio: "Founding president of Educate Nepal Initiative, established in 2016. Led the organization for two consecutive terms, during which he helped conduct national-level talk shows, book donation programs, and established an e-library in Jajarkot district. Played a key role in building the organization's identity and mission to spread knowledge across Nepal.",
-      image: "/images/birendra.webp",
+      image: "/EduN-Website/images/birendra.webp",
       linkedin: "#",
       email: "birendra@edunep.org",
       location: "Kathmandu, Nepal"
@@ -93,7 +93,7 @@ const Team: React.FC = () => {
       name: "Sandesh Paudel",
       role: "Treasurer",
       bio: "Energetic and ambitious entrepreneur experienced in operations, finance, and management. Graduate of Budhanilkantha School and currently studying at Tribhuvan University. Effective communicator and motivator with 3+ years of experience in social and educational development. Committed to leveraging team strengths to achieve organizational goals and handle challenging situations under pressure.",
-      image: "/images/sandesh.webp",
+      image: "/EduN-Website/images/sandesh.webp",
       linkedin: "#",
       email: "sandesh@edunep.org",
       location: "Kathmandu, Nepal"
