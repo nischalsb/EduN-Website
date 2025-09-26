@@ -19,7 +19,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <HelmetProvider>
-        <Router>
+        <Router basename="/EduN-Website">
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-grow">
