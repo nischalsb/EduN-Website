@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Linkedin, Mail, MapPin, X } from 'lucide-react';
+import { Linkedin, Mail, MapPin, X, PenTool, Book, School, GraduationCap, BookOpen } from 'lucide-react';
 
 interface TeamMember {
   name: string;
@@ -22,7 +22,7 @@ const Team: React.FC = () => {
   const closeModal = () => {
     setSelectedMember(null);
   };
-  const leadership = [
+  const teamMembers = [
     {
       name: "Dhirendra Acharya",
       role: "President",
@@ -40,10 +40,7 @@ const Team: React.FC = () => {
       linkedin: "#",
       email: "tilak@edunep.org",
       location: "Kathmandu, Nepal"
-    }
-  ];
-
-  const teamMembers = [
+    },
     {
       name: "Nischal Singh Bista",
       role: "Program Coordinator",
@@ -101,116 +98,188 @@ const Team: React.FC = () => {
   ];
 
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
+  // const fadeInUp = {
+  //   initial: { opacity: 0, y: 60 },
+  //   animate: { opacity: 1, y: 0 },
+  //   transition: { duration: 0.6 }
+  // };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Banner */}
-      <section className="relative h-64 md:h-80 bg-gradient-to-r from-primary-600 to-primary-800 overflow-hidden">
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-white overflow-hidden pt-16 pb-16">
+        {/* Floating Animated Icons */}
+        <motion.div
+          className="absolute top-20 left-10 text-gray-300"
+          animate={{ 
+            y: [0, -20, 0],
+            rotate: [0, 5, 0]
           }}
-        ></div>
-        <div className="absolute inset-0 bg-primary-600/70"></div>
-        <div className="relative container-custom h-full flex items-center">
-          <div className="text-left max-w-2xl">
-            <motion.h1 
-              className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg"
-              {...fadeInUp}
-            >
+          transition={{ 
+            duration: 4, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+        >
+          <BookOpen size={32} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-32 right-16 text-gray-300"
+          animate={{ 
+            y: [0, 15, 0],
+            rotate: [0, -3, 0]
+          }}
+          transition={{ 
+            duration: 3.5, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 0.5
+          }}
+        >
+          <PenTool size={28} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-40 left-1/4 text-gray-300"
+          animate={{ 
+            y: [0, -10, 0],
+            rotate: [0, 2, 0]
+          }}
+          transition={{ 
+            duration: 3, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1
+          }}
+        >
+          <Book size={24} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-40 left-20 text-gray-300"
+          animate={{ 
+            y: [0, 12, 0],
+            rotate: [0, -4, 0]
+          }}
+          transition={{ 
+            duration: 4.5, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1.5
+          }}
+        >
+          <School size={30} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-32 right-1/4 text-gray-300"
+          animate={{ 
+            y: [0, -8, 0],
+            rotate: [0, 3, 0]
+          }}
+          transition={{ 
+            duration: 3.8, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 0.8
+          }}
+        >
+          <GraduationCap size={26} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-1/2 right-10 text-gray-300"
+          animate={{ 
+            y: [0, 18, 0],
+            rotate: [0, -2, 0]
+          }}
+          transition={{ 
+            duration: 4.2, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 2
+          }}
+        >
+          <BookOpen size={22} />
+        </motion.div>
+
+        <div className="container-custom">
+          <motion.div
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
               Our Team
-            </motion.h1>
-            <motion.p 
-              className="text-xl md:text-2xl text-white/90 drop-shadow-md"
-              {...fadeInUp}
-              transition={{ delay: 0.2 }}
-            >
+            </div>
+            <h1 className="text-4xl md:text-6xl font-light text-black mb-8 leading-tight">
+              Meet Our People
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
               Meet the passionate individuals driving change in Nepal's education sector.
-            </motion.p>
-          </div>
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Leadership */}
-      <section className="bg-white section-padding">
+      {/* Our Team */}
+      <section className="bg-gray-50 section-padding">
         <div className="container-custom">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Leadership
-            </h2>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-              {leadership.map((member, index) => (
-                <motion.div
-                  key={member.name}
-                  className="flex flex-col items-center text-center cursor-pointer group"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  onClick={() => handleMemberClick(member)}
-                >
-                  <div className="relative mb-5 overflow-hidden rounded-full w-48 h-48 border-4 border-primary-100 group-hover:border-primary-400 transition-all duration-300">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="px-4">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                    <p className="text-primary-600 font-medium">{member.role}</p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
+              Our Team
             </div>
-          </div>
-
-          {/* Team Members */}
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
               Our Team
             </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light">
+              Passionate individuals working together to create lasting change in education across Nepal.
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
-            {teamMembers.slice(0, 3).map((member, index) => (
-              <TeamMemberCard 
-                key={member.name} 
-                member={member} 
-                index={index} 
-                onClick={handleMemberClick} 
-              />
+          {/* Leadership Row - Dhirendra and Tilak */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16 max-w-4xl mx-auto">
+            {teamMembers.slice(0, 2).map((member, index) => (
+              <motion.div
+                key={member.name}
+                className="flex flex-col items-center text-center cursor-pointer group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                onClick={() => handleMemberClick(member)}
+                whileHover={{ y: -5 }}
+              >
+                <div className="relative mb-8 overflow-hidden w-48 h-48 rounded-full group-hover:shadow-lg transition-all duration-300">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="px-4">
+                  <h3 className="text-2xl font-light text-black mb-2">{member.name}</h3>
+                  <p className="text-gray-600 font-medium">{member.role}</p>
+                </div>
+              </motion.div>
             ))}
           </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            {teamMembers.slice(3).map((member, index) => (
+
+          {/* Other Team Members - Max 3 per row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {teamMembers.slice(2).map((member, index) => (
               <TeamMemberCard 
                 key={member.name} 
                 member={member} 
-                index={index + 3} 
+                index={index + 2} 
                 onClick={handleMemberClick} 
               />
             ))}
@@ -236,7 +305,7 @@ const Team: React.FC = () => {
                   
                   <div className="p-8">
                     <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-                      <div className="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary-100">
+                      <div className="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-gray-200">
                         <img 
                           src={selectedMember.image} 
                           alt={selectedMember.name}
@@ -247,7 +316,7 @@ const Team: React.FC = () => {
                         <h3 className="text-2xl font-bold text-gray-900 mb-1">
                           {selectedMember.name}
                         </h3>
-                        <p className="text-primary-600 font-medium mb-3">
+                        <p className="text-gray-600 font-medium mb-3">
                           {selectedMember.role}
                         </p>
                         <div className="flex items-center justify-center md:justify-start text-gray-500 text-sm mb-4">
@@ -257,14 +326,14 @@ const Team: React.FC = () => {
                         <div className="flex space-x-4 justify-center md:justify-start">
                           <a
                             href={`mailto:${selectedMember.email}`}
-                            className="text-gray-400 hover:text-primary-600 transition-colors"
+                            className="text-gray-400 hover:text-gray-600 transition-colors"
                             title="Email"
                           >
                             <Mail className="h-5 w-5" />
                           </a>
                           <a
                             href={selectedMember.linkedin}
-                            className="text-gray-400 hover:text-primary-600 transition-colors"
+                            className="text-gray-400 hover:text-gray-600 transition-colors"
                             title="LinkedIn"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -351,7 +420,7 @@ const Team: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary-600 text-white section-padding">
+      <section className="bg-gray-600 text-white section-padding">
         <div className="container-custom text-center">
           <motion.h2
             className="text-3xl md:text-4xl font-bold mb-6"
@@ -363,7 +432,7 @@ const Team: React.FC = () => {
             Ready to Make a Difference?
           </motion.h2>
           <motion.p
-            className="text-xl mb-8 text-primary-100 max-w-2xl mx-auto"
+            className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -379,10 +448,10 @@ const Team: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <a href="/get-involved" className="btn-primary bg-accent-500 hover:bg-accent-600 border-none">
+            <a href="/get-involved" className="bg-white text-black font-medium px-8 py-4 transition-all duration-300 hover:bg-gray-100 hover:scale-105">
               Get Involved
             </a>
-            <a href="/contact" className="btn-secondary bg-white text-primary-600 hover:bg-gray-50">
+            <a href="/contact" className="border border-white text-white font-medium px-8 py-4 transition-all duration-300 hover:bg-white hover:text-black hover:scale-105">
               Contact Us
             </a>
           </motion.div>
@@ -397,25 +466,34 @@ const TeamMemberCard: React.FC<{
   member: TeamMember; 
   index: number;
   onClick: (member: TeamMember) => void;
-}> = ({ member, index, onClick }) => (
-  <motion.div
-    className="text-center cursor-pointer group"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.4, delay: index * 0.1 }}
-    onClick={() => onClick(member)}
-  >
-    <div className="relative mb-4 overflow-hidden rounded-full w-32 h-32 mx-auto border-4 border-gray-100 group-hover:border-primary-400 transition-all duration-300">
-      <img
-        src={member.image}
-        alt={member.name}
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <h3 className="font-semibold text-gray-900">{member.name}</h3>
-    <p className="text-primary-600 text-sm">{member.role}</p>
-  </motion.div>
-);
+}> = ({ member, index, onClick }) => {
+  // Members who should have circular borders
+  const circularBorderMembers = ["Nischal Singh Bista", "Sulav Khanal", "Sandesh Paudel", "Birendra Madai"];
+  const hasCircularBorder = circularBorderMembers.includes(member.name);
+
+  return (
+    <motion.div
+      className="text-center cursor-pointer group"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      onClick={() => onClick(member)}
+      whileHover={{ y: -5 }}
+    >
+      <div className={`relative mb-6 overflow-hidden w-32 h-32 mx-auto group-hover:border-gray-400 transition-all duration-300 ${
+        hasCircularBorder ? 'rounded-full border-2 border-gray-300' : ''
+      }`}>
+        <img
+          src={member.image}
+          alt={member.name}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <h3 className="font-light text-black mb-1">{member.name}</h3>
+      <p className="text-gray-600 text-sm font-medium">{member.role}</p>
+    </motion.div>
+  );
+};
 
 export default Team;

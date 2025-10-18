@@ -16,7 +16,7 @@ export default function ProgramDetail() {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Program not found</h1>
           <p className="text-gray-600">Debug: id = {id}</p>
-          <Link to="/programs" className="text-primary-600 hover:underline">
+          <Link to="/programs" className="text-gray-600 hover:underline">
             ← Back to Programs
           </Link>
         </div>
@@ -37,7 +37,7 @@ export default function ProgramDetail() {
           <div className="container-custom text-white">
             <Link 
               to="/programs" 
-              className="inline-flex items-center text-white hover:text-primary-300 mb-4 transition-colors"
+              className="inline-flex items-center text-white hover:text-gray-300 mb-4 transition-colors"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Back to Programs
@@ -92,7 +92,7 @@ export default function ProgramDetail() {
                     <ul className="space-y-2">
                       {program.details.map((detail, index) => (
                         <li key={index} className="flex">
-                          <span className="text-primary-600 mr-2">•</span>
+                          <span className="text-gray-600 mr-2">•</span>
                           {detail}
                         </li>
                       ))}
@@ -152,7 +152,7 @@ export default function ProgramDetail() {
                     <ul className="space-y-2">
                       {program.objectives.map((objective, index) => (
                         <li key={index} className="flex text-sm">
-                          <span className="text-primary-600 mr-2">•</span>
+                          <span className="text-gray-600 mr-2">•</span>
                           {objective}
                         </li>
                       ))}

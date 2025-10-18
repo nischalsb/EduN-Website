@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, BookOpen, ArrowRight } from 'lucide-react';
+import { Users, BookOpen, ArrowRight, Calendar, MapPin, PenTool, Book, School, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import type { Program } from '../types/program';
 
@@ -253,46 +253,130 @@ const programsData: Program[] = [
 
 const Programs: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-64 md:h-80 w-full overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1523050853548-9860dacd1d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80)',
-            backgroundPosition: 'center 30%'
+      <section className="relative bg-white overflow-hidden pt-16 pb-16">
+        {/* Floating Animated Icons */}
+        <motion.div
+          className="absolute top-20 left-10 text-gray-300"
+          animate={{ 
+            y: [0, -20, 0],
+            rotate: [0, 5, 0]
+          }}
+          transition={{ 
+            duration: 4, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
           }}
         >
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-600/70"></div>
-          
-          {/* Content */}
-          <div className="relative h-full flex items-center">
-            <div className="container-custom text-center text-white">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="max-w-3xl mx-auto"
-              >
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-2xl shadow-black/50">
-                  Our Programs
-                </h1>
-                <p className="text-xl md:text-2xl font-medium drop-shadow-lg shadow-black/50">
-                  Comprehensive educational initiatives designed to create lasting impact 
-                  in rural communities across Nepal.
-                </p>
-              </motion.div>
+          <BookOpen size={32} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-32 right-16 text-gray-300"
+          animate={{ 
+            y: [0, 15, 0],
+            rotate: [0, -3, 0]
+          }}
+          transition={{ 
+            duration: 3.5, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 0.5
+          }}
+        >
+          <PenTool size={28} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-40 left-1/4 text-gray-300"
+          animate={{ 
+            y: [0, -10, 0],
+            rotate: [0, 2, 0]
+          }}
+          transition={{ 
+            duration: 3, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1
+          }}
+        >
+          <Book size={24} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-40 left-20 text-gray-300"
+          animate={{ 
+            y: [0, 12, 0],
+            rotate: [0, -4, 0]
+          }}
+          transition={{ 
+            duration: 4.5, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1.5
+          }}
+        >
+          <School size={30} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-32 right-1/4 text-gray-300"
+          animate={{ 
+            y: [0, -8, 0],
+            rotate: [0, 3, 0]
+          }}
+          transition={{ 
+            duration: 3.8, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 0.8
+          }}
+        >
+          <GraduationCap size={26} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-1/2 right-10 text-gray-300"
+          animate={{ 
+            y: [0, 18, 0],
+            rotate: [0, -2, 0]
+          }}
+          transition={{ 
+            duration: 4.2, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 2
+          }}
+        >
+          <BookOpen size={22} />
+        </motion.div>
+
+        <div className="container-custom">
+          <motion.div
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
+              Our Programs
             </div>
-          </div>
+            <h1 className="text-4xl md:text-6xl font-light text-black mb-8 leading-tight">
+              Educational Initiatives
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
+              Comprehensive programs designed to create lasting impact 
+              in rural communities across Nepal.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Programs Grid */}
-      <section className="section-padding">
+      <section className="bg-gray-50 section-padding">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {programsData.map((program: Program) => (
               <Link 
                 to={`/programs/${program.id}`}
@@ -300,12 +384,12 @@ const Programs: React.FC = () => {
                 className="block h-full"
               >
                 <motion.div
-                  className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col"
+                  className="bg-white border border-gray-200 overflow-hidden h-full flex flex-col transition-all duration-300 hover:border-gray-300"
                   whileHover={{ y: -5 }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.6 }}
                 >
                   <div className="relative h-64">
                     <img
@@ -314,31 +398,36 @@ const Programs: React.FC = () => {
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute top-4 left-4">
-                      <div className="bg-white p-3 rounded-full shadow-lg">
-                        <program.icon className="h-6 w-6 text-primary-600" />
-                      </div>
+                            <div className="bg-white p-3">
+                              <program.icon className="h-6 w-6 text-gray-600" />
+                            </div>
                     </div>
                     <div className="absolute top-4 right-4">
-                      <span className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-black text-white px-3 py-1 text-sm font-medium">
                         {program.impact}
                       </span>
                     </div>
                   </div>
                   
-                  <div className="p-6 flex-grow flex flex-col">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{program.title}</h3>
-                    <p className="text-gray-600 mb-4 flex-grow">{program.description}</p>
-                    <div className="flex items-center text-sm text-primary-600 font-medium mt-auto">
-                      Learn more <ArrowRight className="ml-1 h-4 w-4" />
+                  <div className="p-8 flex-grow flex flex-col">
+                    <h3 className="text-xl font-light text-black mb-4">{program.title}</h3>
+                    <p className="text-gray-600 mb-6 flex-grow font-light leading-relaxed">{program.description}</p>
+                    
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center text-sm text-gray-500">
+                        <Calendar size={16} className="mr-2" />
+                        {program.year}
+                      </div>
+                      <div className="flex items-center text-sm text-gray-500">
+                        <MapPin size={16} className="mr-2" />
+                        {program.location}
+                      </div>
                     </div>
-                    <ul className="mt-4 space-y-2">
-                      {program.details.slice(0, 2).map((detail: string, idx: number) => (
-                        <li key={idx} className="text-gray-600 text-sm flex items-start">
-                          <span className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
+                    
+                    <div className="flex items-center text-sm text-black font-medium mt-auto group">
+                      Learn more 
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    </div>
                   </div>
                 </motion.div>
               </Link>
@@ -351,40 +440,44 @@ const Programs: React.FC = () => {
       <section className="bg-white section-padding">
         <div className="container-custom">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
               Program Impact
+            </div>
+            <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
+              Measurable Change
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light">
               Our programs have created measurable change across rural Nepal, 
               touching thousands of lives and building stronger communities.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {[
-              { number: "2,500+", label: "Students Reached", color: "text-blue-600" },
-              { number: "10+", label: "Teachers Trained", color: "text-green-600" },
-              { number: "10+", label: "Schools Improved", color: "text-purple-600" },
-              { number: "5+", label: "Communities Served", color: "text-orange-600" }
+              { number: "2,500+", label: "Students Reached" },
+              { number: "10+", label: "Teachers Trained" },
+              { number: "10+", label: "Schools Improved" },
+              { number: "5+", label: "Communities Served" }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
                 className="text-center"
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
               >
-                <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+                <div className="text-4xl font-light text-black mb-3">
                   {stat.number}
                 </div>
-                <div className="text-gray-600">
+                <div className="text-sm text-gray-500 uppercase tracking-wider font-medium">
                   {stat.label}
                 </div>
               </motion.div>
@@ -394,40 +487,77 @@ const Programs: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary-600 text-white section-padding">
+      <section className="bg-black text-white section-padding">
         <div className="container-custom text-center">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          <motion.div
+            className="text-sm tracking-widest uppercase text-gray-400 mb-4"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
           >
             Support Our Programs
-          </motion.h2>
-          <motion.p
-            className="text-xl mb-8 text-primary-100 max-w-2xl mx-auto"
+          </motion.div>
+          
+          <motion.h2
+            className="text-4xl md:text-6xl font-light mb-8 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.8 }}
+          >
+            Help Us Expand
+          </motion.h2>
+          
+          <motion.p
+            className="text-lg md:text-xl mb-12 text-gray-300 max-w-3xl mx-auto font-light leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             Your contribution directly funds these life-changing programs. 
             Help us expand our reach and create even greater impact.
           </motion.p>
+          
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <a href="/donate" className="btn-primary bg-accent-500 hover:bg-accent-600 border-none">
-              Donate Now
-            </a>
-            <a href="/get-involved" className="btn-secondary bg-white text-primary-600 hover:bg-gray-50">
-              Get Involved
-            </a>
+            <motion.div
+              whileHover={{ y: -2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Link 
+                to="/donate" 
+                className="group inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 transition-all duration-300 hover:bg-gray-100"
+              >
+                <span>Donate Now</span>
+                <ArrowRight 
+                  size={16} 
+                  className="group-hover:translate-x-1 transition-transform duration-300" 
+                />
+              </Link>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Link 
+                to="/get-involved" 
+                className="group inline-flex items-center gap-3 border border-white text-white font-medium px-8 py-4 transition-all duration-300 hover:bg-white hover:text-black"
+              >
+                <span>Get Involved</span>
+                <ArrowRight 
+                  size={16} 
+                  className="group-hover:translate-x-1 transition-transform duration-300" 
+                />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, PenTool, Book, School, GraduationCap, BookOpen } from 'lucide-react';
 import { submitContactForm } from '../services/api';
 
 const contactSchema = z.object({
@@ -119,85 +119,175 @@ const Contact: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-64 md:h-80 w-full overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80)',
-            backgroundPosition: 'center 60%'
+      <section className="relative bg-white overflow-hidden pt-16 pb-16">
+        {/* Floating Animated Icons */}
+        <motion.div
+          className="absolute top-20 left-10 text-gray-300"
+          animate={{ 
+            y: [0, -20, 0],
+            rotate: [0, 5, 0]
+          }}
+          transition={{ 
+            duration: 4, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
           }}
         >
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-600/70"></div>
-          
-          {/* Content */}
-          <div className="relative h-full flex items-center">
-            <div className="container-custom text-center text-white">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="max-w-3xl mx-auto"
-              >
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-2xl shadow-black/50">
-                  Contact Us
-                </h1>
-                <p className="text-xl md:text-2xl font-medium drop-shadow-lg shadow-black/50">
-                  Get in touch with us to learn more about our programs, volunteer opportunities, 
-                  or partnership possibilities. We'd love to hear from you.
-                </p>
-              </motion.div>
+          <BookOpen size={32} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-32 right-16 text-gray-300"
+          animate={{ 
+            y: [0, 15, 0],
+            rotate: [0, -3, 0]
+          }}
+          transition={{ 
+            duration: 3.5, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 0.5
+          }}
+        >
+          <PenTool size={28} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-40 left-1/4 text-gray-300"
+          animate={{ 
+            y: [0, -10, 0],
+            rotate: [0, 2, 0]
+          }}
+          transition={{ 
+            duration: 3, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1
+          }}
+        >
+          <Book size={24} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-40 left-20 text-gray-300"
+          animate={{ 
+            y: [0, 12, 0],
+            rotate: [0, -4, 0]
+          }}
+          transition={{ 
+            duration: 4.5, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1.5
+          }}
+        >
+          <School size={30} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-32 right-1/4 text-gray-300"
+          animate={{ 
+            y: [0, -8, 0],
+            rotate: [0, 3, 0]
+          }}
+          transition={{ 
+            duration: 3.8, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 0.8
+          }}
+        >
+          <GraduationCap size={26} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-1/2 right-10 text-gray-300"
+          animate={{ 
+            y: [0, 18, 0],
+            rotate: [0, -2, 0]
+          }}
+          transition={{ 
+            duration: 4.2, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 2
+          }}
+        >
+          <BookOpen size={22} />
+        </motion.div>
+
+        <div className="container-custom">
+          <motion.div
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
+              Contact Us
             </div>
-          </div>
+            <h1 className="text-4xl md:text-6xl font-light text-black mb-8 leading-tight">
+              Get In Touch
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
+              Get in touch with us to learn more about our programs, volunteer opportunities, 
+              or partnership possibilities. We'd love to hear from you.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Contact Information */}
-      <section className="bg-white section-padding">
+      <section className="bg-gray-50 section-padding">
         <div className="container-custom">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Get In Touch
+            <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
+              Contact Information
+            </div>
+            <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
+              Ways to Reach Us
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light">
               Choose the best way to reach us. We're here to answer your questions 
               and help you get involved in our mission.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (
                 <motion.div
                   key={info.title}
-                  className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-300"
-                  initial={{ opacity: 0, y: 50 }}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
                 >
-                  <IconComponent className="h-12 w-12 text-primary-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                          <div className="inline-flex items-center justify-center w-16 h-16 mb-6">
+                            <IconComponent className="h-8 w-8 text-gray-600" />
+                          </div>
+                  <h3 className="text-xl font-light text-black mb-4">
                     {info.title}
                   </h3>
-                  <div className="space-y-1 mb-3">
+                  <div className="space-y-2 mb-4">
                     {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-gray-700 font-medium">
+                      <p key={idx} className="text-gray-600 font-medium">
                         {detail}
                       </p>
                     ))}
                   </div>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-500 text-sm font-light leading-relaxed">
                     {info.description}
                   </p>
                 </motion.div>
@@ -208,86 +298,89 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="section-padding">
+      <section className="bg-white section-padding">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Form */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
                 Send Us a Message
+              </div>
+              <h3 className="text-3xl md:text-4xl font-light text-black mb-8 leading-tight">
+                Let's Start a Conversation
               </h3>
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-600 mb-3">
                       Your Name *
                     </label>
                     <input
                       {...register('name')}
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                      className="w-full px-4 py-4 border border-gray-300 focus:border-black focus:outline-none transition-colors duration-300"
                       placeholder="John Doe"
                     />
                     {errors.name && (
-                      <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+                      <p className="mt-2 text-sm text-red-600">{errors.name.message}</p>
                     )}
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-600 mb-3">
                       Email Address *
                     </label>
                     <input
                       {...register('email')}
                       type="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                      className="w-full px-4 py-4 border border-gray-300 focus:border-black focus:outline-none transition-colors duration-300"
                       placeholder="john@example.com"
                     />
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+                      <p className="mt-2 text-sm text-red-600">{errors.email.message}</p>
                     )}
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-600 mb-3">
                     Subject *
                   </label>
                   <input
                     {...register('subject')}
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-4 py-4 border border-gray-300 focus:border-black focus:outline-none transition-colors duration-300"
                     placeholder="How can we help you?"
                   />
                   {errors.subject && (
-                    <p className="mt-1 text-sm text-red-600">{errors.subject.message}</p>
+                    <p className="mt-2 text-sm text-red-600">{errors.subject.message}</p>
                   )}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-600 mb-3">
                     Message *
                   </label>
                   <textarea
                     {...register('message')}
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-4 py-4 border border-gray-300 focus:border-black focus:outline-none transition-colors duration-300 resize-none"
                     placeholder="Tell us more about your inquiry..."
                   />
                   {errors.message && (
-                    <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
+                    <p className="mt-2 text-sm text-red-600">{errors.message.message}</p>
                   )}
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full btn-primary flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-black text-white font-medium px-8 py-4 transition-all duration-300 hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>
@@ -303,7 +396,7 @@ const Contact: React.FC = () => {
                 </button>
                 
                 {submitError && (
-                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <div className="mt-6 p-4 bg-red-50 border border-red-200">
                     <p className="text-red-600 text-sm">{submitError}</p>
                   </div>
                 )}
@@ -312,37 +405,40 @@ const Contact: React.FC = () => {
 
             {/* Office Locations */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
                 Our Offices
+              </div>
+              <h3 className="text-3xl md:text-4xl font-light text-black mb-8 leading-tight">
+                Visit Us
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {offices.map((office) => (
-                  <div key={office.city} className="bg-white p-6 rounded-lg shadow-lg">
-                    <div className="flex items-start justify-between mb-3">
-                      <h4 className="text-xl font-semibold text-gray-900">
+                  <div key={office.city} className="border border-gray-200 p-8">
+                    <div className="flex items-start justify-between mb-6">
+                      <h4 className="text-xl font-light text-black">
                         {office.city}
                       </h4>
-                      <span className="bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-gray-100 text-gray-600 px-4 py-2 text-sm font-medium">
                         {office.type}
                       </span>
                     </div>
-                    <div className="space-y-2">
-                      <div className="flex items-start space-x-2">
-                        <MapPin className="h-4 w-4 text-gray-500 mt-1 flex-shrink-0" />
-                        <p className="text-gray-600">{office.address}</p>
+                    <div className="space-y-4">
+                      <div className="flex items-start space-x-3">
+                        <MapPin className="h-5 w-5 text-gray-400 mt-1 flex-shrink-0" />
+                        <p className="text-gray-600 font-light">{office.address}</p>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Phone className="h-4 w-4 text-gray-500 flex-shrink-0" />
-                        <p className="text-gray-600">{office.phone}</p>
+                      <div className="flex items-center space-x-3">
+                        <Phone className="h-5 w-5 text-gray-400 flex-shrink-0" />
+                        <p className="text-gray-600 font-light">{office.phone}</p>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Mail className="h-4 w-4 text-gray-500 flex-shrink-0" />
-                        <p className="text-gray-600">{office.email}</p>
+                      <div className="flex items-center space-x-3">
+                        <Mail className="h-5 w-5 text-gray-400 flex-shrink-0" />
+                        <p className="text-gray-600 font-light">{office.email}</p>
                       </div>
                     </div>
                   </div>
@@ -415,7 +511,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary-600 text-white section-padding">
+      <section className="bg-gray-600 text-white section-padding">
         <div className="container-custom text-center">
           <motion.h2
             className="text-3xl md:text-4xl font-bold mb-6"
@@ -427,7 +523,7 @@ const Contact: React.FC = () => {
             Ready to Make a Difference?
           </motion.h2>
           <motion.p
-            className="text-xl mb-8 text-primary-100 max-w-2xl mx-auto"
+            className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -443,10 +539,10 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <a href="/donate" className="btn-primary bg-accent-500 hover:bg-accent-600 border-none">
+            <a href="/donate" className="bg-white text-black font-medium px-8 py-4 transition-all duration-300 hover:bg-gray-100 hover:scale-105">
               Donate Now
             </a>
-            <a href="/get-involved" className="btn-secondary bg-white text-primary-600 hover:bg-gray-50">
+            <a href="/get-involved" className="border border-white text-white font-medium px-8 py-4 transition-all duration-300 hover:bg-white hover:text-black hover:scale-105">
               Volunteer Today
             </a>
           </motion.div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CreditCard, Wallet, Smartphone, Shield, Heart, Users, BookOpen, Building } from 'lucide-react';
+import { CreditCard, Wallet, Smartphone, Shield, Heart, Users, BookOpen, Building, PenTool, Book, School, GraduationCap } from 'lucide-react';
 
 const Donate: React.FC = () => {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
@@ -81,77 +81,167 @@ const Donate: React.FC = () => {
   // };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-64 md:h-80 w-full overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1523050853548-9862d8c8f4f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80)',
-            backgroundPosition: 'center 60%'
+      <section className="relative bg-white overflow-hidden pt-16 pb-16">
+        {/* Floating Animated Icons */}
+        <motion.div
+          className="absolute top-20 left-10 text-gray-300"
+          animate={{ 
+            y: [0, -20, 0],
+            rotate: [0, 5, 0]
+          }}
+          transition={{ 
+            duration: 4, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
           }}
         >
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-600/70"></div>
-          
-          {/* Content */}
-          <div className="relative h-full flex items-center">
-            <div className="container-custom text-center text-white">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="max-w-3xl mx-auto"
-              >
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-2xl shadow-black/50">
-                  Make a Donation
-                </h1>
-                <p className="text-xl md:text-2xl font-medium drop-shadow-lg shadow-black/50">
-                  Your contribution directly funds educational programs that transform lives 
-                  in rural Nepal. Every dollar makes a meaningful difference.
-                </p>
-              </motion.div>
+          <BookOpen size={32} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-32 right-16 text-gray-300"
+          animate={{ 
+            y: [0, 15, 0],
+            rotate: [0, -3, 0]
+          }}
+          transition={{ 
+            duration: 3.5, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 0.5
+          }}
+        >
+          <PenTool size={28} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-40 left-1/4 text-gray-300"
+          animate={{ 
+            y: [0, -10, 0],
+            rotate: [0, 2, 0]
+          }}
+          transition={{ 
+            duration: 3, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1
+          }}
+        >
+          <Book size={24} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-40 left-20 text-gray-300"
+          animate={{ 
+            y: [0, 12, 0],
+            rotate: [0, -4, 0]
+          }}
+          transition={{ 
+            duration: 4.5, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1.5
+          }}
+        >
+          <School size={30} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-32 right-1/4 text-gray-300"
+          animate={{ 
+            y: [0, -8, 0],
+            rotate: [0, 3, 0]
+          }}
+          transition={{ 
+            duration: 3.8, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 0.8
+          }}
+        >
+          <GraduationCap size={26} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-1/2 right-10 text-gray-300"
+          animate={{ 
+            y: [0, 18, 0],
+            rotate: [0, -2, 0]
+          }}
+          transition={{ 
+            duration: 4.2, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 2
+          }}
+        >
+          <BookOpen size={22} />
+        </motion.div>
+
+        <div className="container-custom">
+          <motion.div
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
+              Make a Donation
             </div>
-          </div>
+            <h1 className="text-4xl md:text-6xl font-light text-black mb-8 leading-tight">
+              Support Our Mission
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
+              Your contribution directly funds educational programs that transform lives 
+              in rural Nepal. Every dollar makes a meaningful difference.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Impact Examples */}
-      <section className="bg-white section-padding">
+      <section className="bg-gray-50 section-padding">
         <div className="container-custom">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
               Your Impact
+            </div>
+            <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
+              Every Dollar Counts
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light">
               See exactly how your donation creates change in rural Nepal communities.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             {impactExamples.map((example, index) => {
               const IconComponent = example.icon;
               return (
                 <motion.div
                   key={example.amount}
-                  className="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300"
-                  initial={{ opacity: 0, y: 50 }}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
                 >
-                  <IconComponent className="h-12 w-12 text-primary-600 mx-auto mb-4" />
-                  <div className="text-2xl font-bold text-primary-600 mb-2">
+                          <div className="inline-flex items-center justify-center w-16 h-16 mb-6">
+                            <IconComponent className="h-8 w-8 text-gray-600" />
+                          </div>
+                  <div className="text-3xl font-light text-black mb-3">
                     ${example.amount}
                   </div>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 text-sm font-light leading-relaxed">
                     {example.impact}
                   </p>
                 </motion.div>
@@ -187,8 +277,8 @@ const Donate: React.FC = () => {
                     }}
                     className={`p-4 rounded-lg border-2 transition-colors ${
                       selectedAmount === amount
-                        ? 'border-primary-600 bg-primary-50 text-primary-600'
-                        : 'border-gray-200 hover:border-primary-300'
+                        ? 'border-gray-600 bg-gray-50 text-gray-600'
+                        : 'border-gray-200 hover:border-gray-400'
                     }`}
                   >
                     <div className="text-xl font-bold">${amount}</div>
@@ -210,7 +300,7 @@ const Donate: React.FC = () => {
                       setCustomAmount(e.target.value);
                       setSelectedAmount(null);
                     }}
-                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                     placeholder="0.00"
                     min="1"
                   />
@@ -232,12 +322,12 @@ const Donate: React.FC = () => {
                         disabled={!method.available}
                         className={`p-4 rounded-lg border-2 transition-colors text-left ${
                           selectedPayment === method.id
-                            ? 'border-primary-600 bg-primary-50'
-                            : 'border-gray-200 hover:border-primary-300'
+                            ? 'border-gray-600 bg-gray-50'
+                            : 'border-gray-200 hover:border-gray-400'
                         } ${!method.available ? 'opacity-50 cursor-not-allowed' : ''}`}
                       >
                         <div className="flex items-center space-x-3">
-                          <IconComponent className="h-6 w-6 text-primary-600" />
+                          <IconComponent className="h-6 w-6 text-gray-600" />
                           <div>
                             <div className="font-medium text-gray-900">
                               {method.name}
@@ -311,8 +401,8 @@ const Donate: React.FC = () => {
                 </h3>
                 <div className="space-y-4">
                   {[
-                    { category: 'Education Programs', percentage: 75, color: 'bg-primary-600' },
-                    { category: 'Infrastructure', percentage: 15, color: 'bg-accent-500' },
+                    { category: 'Education Programs', percentage: 75, color: 'bg-gray-600' },
+                    { category: 'Infrastructure', percentage: 15, color: 'bg-gray-500' },
                     { category: 'Administration', percentage: 8, color: 'bg-gray-400' },
                     { category: 'Fundraising', percentage: 2, color: 'bg-gray-300' },
                   ].map((item) => (
@@ -345,7 +435,7 @@ const Donate: React.FC = () => {
                     { achievement: 'Installed solar panels', location: '5 schools' },
                   ].map((item, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
                       <div>
                         <div className="font-medium text-gray-900">{item.achievement}</div>
                         <div className="text-sm text-gray-600">{item.location}</div>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Heart, Users, Calendar, MapPin, Mail, CheckCircle } from 'lucide-react';
+import { Heart, Users, Calendar, MapPin, Mail, CheckCircle, PenTool, Book, School, GraduationCap, BookOpen } from 'lucide-react';
 
 const volunteerSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -108,54 +108,141 @@ const GetInvolved: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-64 md:h-80 w-full overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80)',
-            backgroundPosition: 'center 60%'
+      <section className="relative bg-white overflow-hidden pt-16 pb-16">
+        {/* Floating Animated Icons */}
+        <motion.div
+          className="absolute top-20 left-10 text-gray-300"
+          animate={{ 
+            y: [0, -20, 0],
+            rotate: [0, 5, 0]
+          }}
+          transition={{ 
+            duration: 4, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
           }}
         >
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-600/70"></div>
-          
-          {/* Content */}
-          <div className="relative h-full flex items-center">
-            <div className="container-custom text-center text-white">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="max-w-3xl mx-auto"
-              >
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-2xl shadow-black/50">
-                  Get Involved
-                </h1>
-                <p className="text-xl md:text-2xl font-medium drop-shadow-lg shadow-black/50">
-                  Join our mission to transform education in Nepal. Whether you can volunteer 
-                  your time, skills, or resources, there's a way for everyone to make a difference.
-                </p>
-              </motion.div>
+          <BookOpen size={32} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-32 right-16 text-gray-300"
+          animate={{ 
+            y: [0, 15, 0],
+            rotate: [0, -3, 0]
+          }}
+          transition={{ 
+            duration: 3.5, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 0.5
+          }}
+        >
+          <PenTool size={28} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-40 left-1/4 text-gray-300"
+          animate={{ 
+            y: [0, -10, 0],
+            rotate: [0, 2, 0]
+          }}
+          transition={{ 
+            duration: 3, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1
+          }}
+        >
+          <Book size={24} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-40 left-20 text-gray-300"
+          animate={{ 
+            y: [0, 12, 0],
+            rotate: [0, -4, 0]
+          }}
+          transition={{ 
+            duration: 4.5, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1.5
+          }}
+        >
+          <School size={30} />
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-32 right-1/4 text-gray-300"
+          animate={{ 
+            y: [0, -8, 0],
+            rotate: [0, 3, 0]
+          }}
+          transition={{ 
+            duration: 3.8, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 0.8
+          }}
+        >
+          <GraduationCap size={26} />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-1/2 right-10 text-gray-300"
+          animate={{ 
+            y: [0, 18, 0],
+            rotate: [0, -2, 0]
+          }}
+          transition={{ 
+            duration: 4.2, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 2
+          }}
+        >
+          <BookOpen size={22} />
+        </motion.div>
+
+        <div className="container-custom">
+          <motion.div
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
+              Get Involved
             </div>
-          </div>
+            <h1 className="text-4xl md:text-6xl font-light text-black mb-8 leading-tight">
+              Join Our Mission
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
+              Join our mission to transform education in Nepal. Whether you can volunteer 
+              your time, skills, or resources, there's a way for everyone to make a difference.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Volunteer Opportunities */}
-      <section className="bg-white section-padding">
+      <section className="bg-gray-50 section-padding">
         <div className="container-custom">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
               Volunteer Opportunities
+            </div>
+            <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
+              Ways to Help
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Make a direct impact by volunteering with us. Choose from various 
@@ -175,7 +262,7 @@ const GetInvolved: React.FC = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <IconComponent className="h-12 w-12 text-primary-600 mb-4" />
+                  <IconComponent className="h-12 w-12 text-gray-600 mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {opportunity.title}
                   </h3>
@@ -195,7 +282,7 @@ const GetInvolved: React.FC = () => {
                     <ul className="space-y-1">
                       {opportunity.requirements.map((req, idx) => (
                         <li key={idx} className="text-gray-600 text-sm flex items-start">
-                          <span className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                          <span className="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                           {req}
                         </li>
                       ))}
@@ -244,7 +331,7 @@ const GetInvolved: React.FC = () => {
                   <input
                     {...register('name')}
                     type="text"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                     placeholder="Your full name"
                   />
                   {errors.name && (
@@ -259,7 +346,7 @@ const GetInvolved: React.FC = () => {
                   <input
                     {...register('email')}
                     type="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                     placeholder="your.email@example.com"
                   />
                   {errors.email && (
@@ -275,7 +362,7 @@ const GetInvolved: React.FC = () => {
                 <input
                   {...register('phone')}
                   type="tel"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                   placeholder="+1 (555) 123-4567"
                 />
                 {errors.phone && (
@@ -296,7 +383,7 @@ const GetInvolved: React.FC = () => {
                       onClick={() => handleSkillToggle(skill)}
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         selectedSkills.includes(skill)
-                          ? 'bg-primary-600 text-white'
+                          ? 'bg-gray-600 text-white'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       }`}
                     >
@@ -316,7 +403,7 @@ const GetInvolved: React.FC = () => {
                 </label>
                 <select
                   {...register('availability')}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                 >
                   <option value="">Select your availability</option>
                   <option value="1-2 weeks">1-2 weeks</option>
@@ -339,7 +426,7 @@ const GetInvolved: React.FC = () => {
                 <textarea
                   {...register('experience')}
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                   placeholder="Tell us about your relevant experience, education, or background..."
                 />
                 {errors.experience && (
@@ -355,7 +442,7 @@ const GetInvolved: React.FC = () => {
                 <textarea
                   {...register('motivation')}
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                   placeholder="Share your motivation and what you hope to achieve through volunteering..."
                 />
                 {errors.motivation && (
@@ -420,7 +507,7 @@ const GetInvolved: React.FC = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <IconComponent className="h-12 w-12 text-primary-600 mx-auto mb-4" />
+                  <IconComponent className="h-12 w-12 text-gray-600 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {item.title}
                   </h3>

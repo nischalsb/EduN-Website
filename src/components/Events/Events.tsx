@@ -101,7 +101,7 @@ const Events: React.FC<EventsProps> = ({ events }) => {
                 />
                 
                 <button 
-                  className="absolute -left-16 text-white hover:text-primary-400 transition-colors"
+                  className="absolute -left-16 text-white hover:text-gray-300 transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     navigateImage('prev');
@@ -111,7 +111,7 @@ const Events: React.FC<EventsProps> = ({ events }) => {
                 </button>
                 
                 <button 
-                  className="absolute -right-16 text-white hover:text-primary-400 transition-colors"
+                  className="absolute -right-16 text-white hover:text-gray-300 transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     navigateImage('next');

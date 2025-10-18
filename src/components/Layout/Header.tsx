@@ -33,8 +33,8 @@ const Header: React.FC = () => {
                 to={item.href}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isActive(item.href)
-                    ? 'text-primary-600'
-                    : 'text-gray-600 hover:text-primary-600'
+                    ? 'text-gray-900'
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 {item.name}
@@ -42,9 +42,12 @@ const Header: React.FC = () => {
             ))}
             <Link
               to="/donate"
-              className="btn-primary"
+              className="group inline-flex items-center gap-2 bg-black text-white font-medium px-6 py-3 transition-all duration-300 hover:bg-gray-800 transform hover:-translate-y-0.5 shadow-sm hover:shadow-md"
             >
-              Donate Now
+              <span>Donate Now</span>
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
 
@@ -72,8 +75,8 @@ const Header: React.FC = () => {
                   to={item.href}
                   className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
                     isActive(item.href)
-                      ? 'text-primary-600 bg-primary-50'
-                      : 'text-gray-600 hover:text-primary-600 hover:bg-gray-50'
+                      ? 'text-gray-900 bg-gray-100'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -82,10 +85,13 @@ const Header: React.FC = () => {
               ))}
               <Link
                 to="/donate"
-                className="block px-3 py-2 text-base font-medium text-white bg-primary-600 hover:bg-primary-700 rounded-md mt-4"
+                className="group flex items-center justify-center gap-2 bg-black text-white font-medium px-6 py-3 mt-4 transition-all duration-300 hover:bg-gray-800 transform hover:-translate-y-0.5 shadow-sm hover:shadow-md"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Donate Now
+                <span>Donate Now</span>
+                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
             </div>
           </div>
