@@ -478,10 +478,8 @@ const TeamMemberCard: React.FC<{
   index: number;
   onClick: (member: TeamMember) => void;
 }> = ({ member, index, onClick }) => {
-  // All members should have circular borders
-  const circularBorderMembers = ["Nischal Singh Bista", "Sulav Khanal", "Sandesh Paudel", "Birendra Madai", 
-    "Kalpana Acharya", "Byanjana Pokhrel", "Sushmita Khanal", "Abhiyan Thapa", "Tilak Dhital"];
-  const hasCircularBorder = true; // All members should have circular borders
+  // All members have circular borders
+  const hasCircularBorder = true;
 
   return (
     <motion.div

@@ -212,10 +212,10 @@ const Home = () => {
               transition={{ delay: 1, duration: 0.8 }}
             >
               {[
-                { icon: Users, value: "1K+", label: "Students" },
-                { icon: School, value: "5+", label: "Schools" },
-                { icon: GraduationCap, value: "15+", label: "Teachers" },
-                { icon: Globe, value: "10+", label: "Communities" },
+                { icon: Users, value: "2500+", label: "Students" },
+                { icon: School, value: "45+", label: "Schools" },
+                { icon: GraduationCap, value: "180+", label: "Teachers" },
+                { icon: Globe, value: "25+", label: "Communities" },
               ].map((stat) => (
                 <motion.div
                   key={stat.label}

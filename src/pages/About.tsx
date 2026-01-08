@@ -14,12 +14,7 @@ import { Link } from 'react-router-dom';
 
 
 const About: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
+  
 
   const values = [
     {

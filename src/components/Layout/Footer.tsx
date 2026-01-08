@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { SITE_CONFIG } from '../../lib/constants';
 
@@ -84,8 +84,8 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-white text-sm">
             2024 {SITE_CONFIG.name}. All rights reserved. | 
-            <Link to="/privacy" onClick={scrollToTop} className="text-white hover:text-gray-300 ml-1">Privacy Policy</Link> | 
-            <Link to="/terms" onClick={scrollToTop} className="text-white hover:text-gray-300 ml-1">Terms of Service</Link>
+            <Link to="/privacy" className="text-white hover:text-gray-300 ml-1">Privacy Policy</Link> | 
+            <Link to="/terms" className="text-white hover:text-gray-300 ml-1">Terms of Service</Link>
           </p>
         </div>
       </div>
