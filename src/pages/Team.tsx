@@ -24,12 +24,12 @@ const Team: React.FC = () => {
   };
   const teamMembers = [
     {
-      name: "Dhirendra Acharya",
+      name: "Sulav Khanal",
       role: "President",
-      bio: "President of the Education Nepal Initiative (EduN) with a strong academic background including an MBA at Global College. His educational journey began at Xavier International School, followed by studies at Caribbean College and Brooklyn College, culminating in a Bachelor's in Social Work (B.S.W.). Has served as a member secretary under the Ministry of Youth and Sports' Youth and Self-Employment Fund.",
-      image: "/images/president.jpg",
+      bio: "Visionary leader dedicated to transforming education through digital technology. Co-Founder of MeroSiksha, having trained over 5,000 students and teachers in digital learning practices. Led a successful $8,000 fundraising campaign for a government school in Rimuwa, Gulmi, and spearheaded programs to support widows in western Nepal. Passionate public speaker on leadership and digital education.",
+      image: "/images/sulav.jpg",
       linkedin: "#",
-      email: "dhirendra@edunep.org",
+      email: "sulav@edunep.org",
       location: "Kathmandu, Nepal"
     },
     {
@@ -41,49 +41,14 @@ const Team: React.FC = () => {
       email: "tilak@edunep.org",
       location: "Kathmandu, Nepal"
     },
+    
     {
-      name: "Nischal Singh Bista",
-      role: "Program Coordinator",
-      bio: "A social, curious, and ambitious individual who has learned about the reality and needs of society through this organization. Committed to ensuring programs are well-planned, executed effectively, and continuously improved for success. Enjoys being part of a platform that showcases work and provides abundant learning opportunities.",
-      image: "/images/nischal.jpeg",
-      linkedin: "#",
-      email: "nischal@edunep.org",
-      location: "Kathmandu, Nepal"
-    },
-    {
-      name: "Bibhas Parajuli",
-      role: "Joint Secretary",
-      bio: "Aspiring student of Bachelors in Development Studies (BDevS) at National College. Has been involved in social and development work for the past 3 years, with a focus on sustainable development, quality education, and research. Passionate about creating positive change through education and community development initiatives.",
-      image: "/images/logo.png",
+      name: "Sushmita Khanal",
+      role: "Secretary",
+      bio: "Susmita Khanal is an MSc IT (Data Analytics) student at Islington College and a graduate of Shankerdev Campus, currently working as a Software Engineer. Beyond her academic and professional pursuits, she is deeply interested in social work and is motivated to use her skills and knowledge to create positive social impact. She aims to contribute meaningfully to both the technology sector and society.",
+      image: "/images/sushmita.jpeg",
       linkedin: "#",
       email: "bibhas@edunep.org",
-      location: "Kathmandu, Nepal"
-    },
-    {
-      name: "Kussum Ghimire",
-      role: "Executive Member",
-      bio: "An upbeat, self-motivated team player with excellent communication skills and a passion for social work. Enjoys reading, writing, singing, and sketching. Has worked in the field of menstrual health awareness and organized various fundraising, blood donation, and educational events. Committed to helping young minds grow through educational and social empowerment programs.",
-      image: "/images/logo.png",
-      linkedin: "#",
-      email: "kussum@edunep.org",
-      location: "Kathmandu, Nepal"
-    },
-    {
-      name: "Sulav Khanal",
-      role: "Executive Member",
-      bio: "Visionary leader dedicated to transforming education through digital technology. Co-Founder of MeroSiksha, having trained over 5,000 students and teachers in digital learning practices. Led a successful $8,000 fundraising campaign for a government school in Rimuwa, Gulmi, and spearheaded programs to support widows in western Nepal. Passionate public speaker on leadership and digital education.",
-      image: "/images/sulav.jpg",
-      linkedin: "#",
-      email: "sulav@edunep.org",
-      location: "Kathmandu, Nepal"
-    },
-    {
-      name: "Birendra Madai",
-      role: "Founder, Executive Member",
-      bio: "Founding president of Educate Nepal Initiative, established in 2016. Led the organization for two consecutive terms, during which he helped conduct national-level talk shows, book donation programs, and established an e-library in Jajarkot district. Played a key role in building the organization's identity and mission to spread knowledge across Nepal.",
-      image: "/images/birendra.webp",
-      linkedin: "#",
-      email: "birendra@edunep.org",
       location: "Kathmandu, Nepal"
     },
     {
@@ -93,6 +58,52 @@ const Team: React.FC = () => {
       image: "/images/sandesh.webp",
       linkedin: "#",
       email: "sandesh@edunep.org",
+      location: "Kathmandu, Nepal"
+    },
+    {
+      name: "Kalpana Acharya",
+      role: "Vice Secretary",
+      bio: "Energetic and ambitious entrepreneur experienced in operations, finance, and management. Graduate of Budhanilkantha School and currently studying at Tribhuvan University. Effective communicator and motivator with 3+ years of experience in social and educational development. Committed to leveraging team strengths to achieve organizational goals and handle challenging situations under pressure.",
+      image: "/images/kalpana.jpeg",
+      linkedin: "#",
+      email: "sandesh@edunep.org",
+      location: "Kathmandu, Nepal"
+    },
+    
+    {
+      name: "Birendra Madai",
+      role: "Founding Member, Executive Member",
+      bio: "Founding president of Educate Nepal Initiative, established in 2016. Led the organization for two consecutive terms, during which he helped conduct national-level talk shows, book donation programs, and established an e-library in Jajarkot district. Played a key role in building the organization's identity and mission to spread knowledge across Nepal.",
+      image: "/images/birendra.webp",
+      linkedin: "#",
+      email: "birendra@edunep.org",
+      location: "Kathmandu, Nepal"
+    },
+    {
+      name: "Abhiyan Thapa",
+      role: "Executive Member",
+      bio: "Abhiyan Thapa is a Civil Engineer working as a constructor and consultant, with experience in planning and executing infrastructure projects. Alongside his professional work, he is actively inclined toward social service, contributing his technical expertise to community development initiatives.",
+      image: "/images/abhiyan.jpeg",
+      linkedin: "#",
+      email: "birendra@edunep.org",
+      location: "Kathmandu, Nepal"
+    },
+    {
+      name: "Byanjana Pokhrel",
+      role: "Executive Member",
+      bio: "A Bachelor of Business Management (BBM) at GoldenGate International College (GGIC) and have previously gained professional experience as a Client Service Executive. During this role, I worked closely with clients, managed effective communication, and ensured strong and respectful client relationships. Beyond academic and professional interests, I am personally motivated to use my knowledge and skills in ways that contribute positively to society. With strong communication abilities, a responsible work ethic, and an interest in business and management, I aim to grow professionally while also creating meaningful social impact.",
+      image: "/images/byanjana.jpeg",
+      linkedin: "#",
+      email: "birendra@edunep.org",
+      location: "Kathmandu, Nepal"
+    },
+    {
+      name: "Nischal Singh Bista",
+      role: "Executive Member",
+      bio: "A social, curious, and ambitious individual who has learned about the reality and needs of society through this organization. Committed to ensuring programs are well-planned, executed effectively, and continuously improved for success. Enjoys being part of a platform that showcases work and provides abundant learning opportunities.",
+      image: "/images/nischal.jpeg",
+      linkedin: "#",
+      email: "nischal@edunep.org",
       location: "Kathmandu, Nepal"
     }
   ];
@@ -467,9 +478,10 @@ const TeamMemberCard: React.FC<{
   index: number;
   onClick: (member: TeamMember) => void;
 }> = ({ member, index, onClick }) => {
-  // Members who should have circular borders
-  const circularBorderMembers = ["Nischal Singh Bista", "Sulav Khanal", "Sandesh Paudel", "Birendra Madai"];
-  const hasCircularBorder = circularBorderMembers.includes(member.name);
+  // All members should have circular borders
+  const circularBorderMembers = ["Nischal Singh Bista", "Sulav Khanal", "Sandesh Paudel", "Birendra Madai", 
+    "Kalpana Acharya", "Byanjana Pokhrel", "Sushmita Khanal", "Abhiyan Thapa", "Tilak Dhital"];
+  const hasCircularBorder = true; // All members should have circular borders
 
   return (
     <motion.div
