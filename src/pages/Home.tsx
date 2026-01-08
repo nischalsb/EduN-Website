@@ -1,9 +1,20 @@
 import { motion } from 'framer-motion';
 import { GraduationCap, School, Users, ArrowRight, BookOpen, Globe, ChevronDown, PenTool, Book } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 const Home = () => {
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // for smooth scrolling
+  });
+};
   const partners = [
     { name: "Morgridge Center for Public Service", logo: "/images/morgridge.png" },
     { name: "Budhanilkantha School", logo: "/images/bnks.png" },
@@ -164,6 +175,7 @@ const Home = () => {
               >
                 <Link 
                   to="/programs" 
+                  onClick={scrollToTop}
                   className="group inline-flex items-center gap-3 bg-black text-white font-medium px-8 py-4 transition-all duration-300 hover:bg-gray-800"
                 >
                   <span>Explore Our Work</span>
@@ -180,6 +192,7 @@ const Home = () => {
               >
                 <Link 
                   to="/donate" 
+                  onClick={scrollToTop}
                   className="group inline-flex items-center gap-3 border border-black text-black font-medium px-8 py-4 transition-all duration-300 hover:bg-black hover:text-white"
                 >
                   <span>Make a Difference</span>
@@ -336,6 +349,7 @@ const Home = () => {
             >
               <Link 
                 to="/donate" 
+                onClick={scrollToTop}
                 className="group inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 transition-all duration-300 hover:bg-gray-100"
               >
                 <span>Donate Today</span>
@@ -352,6 +366,7 @@ const Home = () => {
             >
               <Link 
                 to="/get-involved" 
+                onClick={scrollToTop}
                 className="group inline-flex items-center gap-3 border border-white text-white font-medium px-8 py-4 transition-all duration-300 hover:bg-white hover:text-black"
               >
                 <span>Volunteer With Us</span>

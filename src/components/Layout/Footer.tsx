@@ -1,7 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { SITE_CONFIG } from '../../lib/constants';
+
+// Utility function to scroll to top of the page
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
 
 const Footer: React.FC = () => {
   return (
@@ -23,10 +31,10 @@ const Footer: React.FC = () => {
               Together, we're building a brighter future for Nepal's children.
             </p>
             <div className="flex space-x-4">
-              <a href={SITE_CONFIG.links.facebook} className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/EduNfornepal/" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href={SITE_CONFIG.links.twitter} className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://x.com/NepalEdun" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
               <a href={SITE_CONFIG.links.instagram} className="text-gray-400 hover:text-white transition-colors">
@@ -42,11 +50,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/programs" className="text-white hover:text-gray-300 transition-colors">Programs</Link></li>
-              <li><Link to="/impact" className="text-white hover:text-gray-300 transition-colors">Our Impact</Link></li>
-              <li><Link to="/get-involved" className="text-white hover:text-gray-300 transition-colors">Get Involved</Link></li>
-              <li><Link to="/about" className="text-white hover:text-gray-300 transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="text-white hover:text-gray-300 transition-colors">Contact</Link></li>
+              <li><Link to="/programs" onClick={scrollToTop} className="text-white hover:text-gray-300 transition-colors">Programs</Link></li>
+              <li><Link to="/impact" onClick={scrollToTop} className="text-white hover:text-gray-300 transition-colors">Our Impact</Link></li>
+              <li><Link to="/get-involved" onClick={scrollToTop} className="text-white hover:text-gray-300 transition-colors">Get Involved</Link></li>
+              <li><Link to="/about" onClick={scrollToTop} className="text-white hover:text-gray-300 transition-colors">About Us</Link></li>
+              <li><Link to="/contact" onClick={scrollToTop} className="text-white hover:text-gray-300 transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -56,17 +64,17 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-white" />
-                <span className="text-white text-sm">info@educatenepal.org</span>
+                <span className="text-white text-sm">educatenepalinitiative123@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-white" />
-                <span className="text-white text-sm">+977-1-4567890</span>
+                <span className="text-white text-sm">+977 9860495325</span>
               </div>
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 text-white mt-0.5" />
                 <span className="text-white text-sm">
-                  Kathmandu, Nepal<br />
-                  GPO Box 12345
+                  Narayansthan, Budhanilkantha 
+                  Kathmandu, Nepal
                 </span>
               </div>
             </div>
@@ -75,9 +83,9 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-white text-sm">
-            © 2024 {SITE_CONFIG.name}. All rights reserved. | 
-            <Link to="/privacy" className="text-white hover:text-gray-300 ml-1">Privacy Policy</Link> | 
-            <Link to="/terms" className="text-white hover:text-gray-300 ml-1">Terms of Service</Link>
+            2024 {SITE_CONFIG.name}. All rights reserved. | 
+            <Link to="/privacy" onClick={scrollToTop} className="text-white hover:text-gray-300 ml-1">Privacy Policy</Link> | 
+            <Link to="/terms" onClick={scrollToTop} className="text-white hover:text-gray-300 ml-1">Terms of Service</Link>
           </p>
         </div>
       </div>

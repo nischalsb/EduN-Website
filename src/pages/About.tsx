@@ -12,7 +12,14 @@ import { Link } from 'react-router-dom';
 //   }
 // } as const;
 
+
 const About: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   const values = [
     {
@@ -388,6 +395,13 @@ const About: React.FC = () => {
             >
               <Link 
                 to="/get-involved" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  setTimeout(() => {
+                    window.location.href = '/get-involved';
+                  }, 100);
+                }}
                 className="group inline-flex items-center gap-3 bg-white text-black font-medium px-8 py-4 transition-all duration-300 hover:bg-gray-100"
               >
                 <span>Get Involved</span>
@@ -404,6 +418,13 @@ const About: React.FC = () => {
             >
               <Link 
                 to="/contact" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  setTimeout(() => {
+                    window.location.href = '/contact';
+                  }, 100);
+                }}
                 className="group inline-flex items-center gap-3 border border-white text-white font-medium px-8 py-4 transition-all duration-300 hover:bg-white hover:text-black"
               >
                 <span>Contact Us</span>

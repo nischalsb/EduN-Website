@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
+import ScrollToTop from './components/Layout/ScrollToTop';
 import Home from './pages/Home';
 import Programs from './pages/Programs';
 import Impact from './pages/Impact';
@@ -21,6 +22,7 @@ function App() {
       <HelmetProvider>
         <Router>
           <div className="min-h-screen flex flex-col">
+            <ScrollToTop />
             <Header />
             <main className="flex-grow">
               <Routes>
