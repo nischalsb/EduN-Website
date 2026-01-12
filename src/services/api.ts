@@ -1,7 +1,10 @@
 // API configuration
-const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-api-gateway-url.amazonaws.com/prod' // Replace with your actual API Gateway URL
-  : 'http://localhost:3000'; // For local development
+// Read from Vite environment variables so we can point to a real backend in production
+// Example in .env.local (or .env):
+// VITE_API_BASE_URL=https://your-api.example.com
+// VITE_CONTACT_PATH=/contact
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
+const CONTACT_PATH = import.meta.env.VITE_CONTACT_PATH || '/api/contact';
 
 // Generic API call function
 async function apiCall(endpoint: string, data: any) {
@@ -32,7 +35,25 @@ export const submitContactForm = async (formData: {
   subject: string;
   message: string;
 }) => {
-  return apiCall('/contact', formData);
+  try {
+    const response = await fetch(`${API_BASE_URL}${CONTACT_PATH}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(errorData.message || 'Failed to send message');
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error('Error in submitContactForm:', error);
+    throw error;
+  }
 };
 
 // Volunteer application API

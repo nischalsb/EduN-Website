@@ -17,9 +17,10 @@ const Home = () => {
 };
   const partners = [
     { name: "Morgridge Center for Public Service", logo: "/images/morgridge.png" },
-    { name: "Budhanilkantha School", logo: "/images/bnks.png" },
+    { name: "Budhanilkantha Education Services", logo: "/images/bes.jpeg" },
     { name: "Merosiksha", logo: "/images/merosiksha.png" },
-    { name: "WIF", logo: "/images/wif.png" },
+    { name: "Landmark Hotel and Resorts", logo: "/images/landmark.png" }
+
   ];
 
   return (
@@ -279,7 +280,7 @@ const Home = () => {
               <motion.div 
                 key={partner.name} 
                 className="group"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 1, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ 
@@ -288,11 +289,11 @@ const Home = () => {
                 }}
                 whileHover={{ y: -5 }}
               >
-                <div className="p-8 bg-white border border-gray-200 h-32 flex items-center justify-center transition-all duration-300 hover:border-gray-300">
+                <div className="p-8 bg-white border border-gray-200 h-40 flex items-center justify-center transition-all duration-300 hover:border-gray-300">
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-16 max-w-full object-contain opacity-60 group-hover:opacity-80 transition-opacity duration-300"
+                    className="max-h-20 max-w-full object-contain"
                     title={partner.name}
                   />
                 </div>

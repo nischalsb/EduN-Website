@@ -28,25 +28,25 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@educatenepal.org"],
+      details: ["educatenepalinitiative123@gmail.com"],
       description: "Send us an email and we'll respond within 24 hours"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+977-1-2345678", "+977-9898989898"],
-      description: "Available Monday to Friday, 9 AM to 5 PM NPT"
+      details: ["+977 9860495325"],
+      description: "Available Sunday to Friday, 10 AM to 4 PM NPT"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Kathmandu, Nepal", "GPO Box 12345"],
+      details: ["Narayansthan, Budhanilkantha", "Kathmandu, Nepal"],
       description: "Schedule a visit to our office in Kathmandu"
     },
     {
       icon: Clock,
       title: "Office Hours",
-      details: ["Mon - Fri: 9:00 AM - 5:00 PM", "Sat: 10:00 AM - 2:00 PM"],
+      details: ["Sun - Fri: 10:00 AM - 4:00 PM"],
       description: "Nepal Time (NPT) - UTC +5:45"
     }
   ];
@@ -54,18 +54,11 @@ const Contact: React.FC = () => {
   const offices = [
     {
       city: "Kathmandu",
-      address: "Budhanilkantha, Ward 05, Kathmandu 44600, Nepal",
-      phone: "+977-1-4567890",
-      email: "xxxxxxx@educatenepal.org",
+      address: "Narayansthan Budhanilkantha, Kathmandu 44600, Nepal",
+      phone: "+977 9860495325",
+      email: "educatenepalinitiative123@gmail.com",
       type: "Main Office"
-    },
-    {
-      city: "Nawalparasi",
-      address: "Bardaghat Municipality, Nawalparasi District",
-      phone: "+977-9841234567",
-      email: "xxxxxxx@educatenepal.org",
-      type: "Field Office"
-    },
+    }
   ];
 
   const onSubmit = async (data: ContactForm) => {

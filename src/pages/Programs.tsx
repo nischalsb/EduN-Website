@@ -7,12 +7,46 @@ import type { Program } from '../types/program';
 const programsData: Program[] = [
     {
       id: 1,
+      title: "IT project in Kohalpur",
+      description: "Empowering Futures: Building Foundational Skills in Rural Nepal through critical thinking, computational literacy, and problem-solving for grades 8–10.",
+      icon: GraduationCap,
+      impact: "10 students • NPR 100K scholarship provided",
+      category: "education",
+      image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
+      details: [
+        "Hands-on coding games and introductory web development",
+        "AI usage projects and real-world problem-solving challenges",
+        "Peer mentorship: top urban students + local teachers",
+        "Teacher workshops and community-driven learning",
+        "Scholarships worth NPR 100,000 awarded to deserving students",
+        "Career exposure: IT skills like web dev and practical AI usage"
+      ],
+      year: "2025",
+      fullDescription: "Empowering Futures: Building Foundational Skills in Rural Nepal is a transformative educational initiative designed to break barriers in traditional learning. The project equips students in grades 8–10 with critical thinking, computational literacy, and problem-solving through hands-on, interactive learning. In partnership with the Educate Nepal Initiative (EduN), the program sparks creativity and innovation for students with limited access to advanced resources. Through coding games, AI projects, and real-world challenges, the initiative ignites curiosity and prepares students for the modern world. A unique mentorship program pairs top urban students and local teachers with rural students, creating a dynamic peer-to-peer learning environment. Teacher workshops, community-driven learning, and localized content ensure scalability and sustainability. Additionally, scholarships worth NPR 100,000 and career development opportunities support high-achieving students with pathways to further education and vocational training.",
+      location: "Kohalpur Municipality, Banke, Nepal",
+      date: "2025",
+      events: [
+        {
+          id: 'kohalpur-bootcamp',
+          title: 'IT Foundations Bootcamp',
+          description: 'Intro to coding, computational thinking, and AI literacy with mentorship and hands-on projects.',
+          date: '2025',
+          images: [
+            'https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1200&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1518773553398-650c184e0bb3?q=80&w=1200&auto=format&fit=crop'
+          ]
+        }
+      ]
+    },
+    {
+      id: 7,
       title: "Nepal ma Abasar nai xaina - NMAC",
       description: "A comprehensive youth empowerment program focusing on opportunities and leadership development in Nepal.",
       icon: Users,
       impact: "500+ youth participants annually",
       category: "leadership",
-      image: "/EduN-Website/images/1. nmbc- Nepal ma Abasar nai xaina/nmac11.webp",
+      image: "/images/1. nmbc- Nepal ma Abasar nai xaina/nmac11.webp",
       details: [
         "Keynote speeches from industry leaders",
         "Panel discussions on youth opportunities",
@@ -249,6 +283,7 @@ const programsData: Program[] = [
         }
       ]
     }
+    
   ];
 
 const Programs: React.FC = () => {

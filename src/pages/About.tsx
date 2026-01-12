@@ -40,15 +40,19 @@ const About: React.FC = () => {
   ];
 
   const milestones = [
-    { year: "2016", event: "Founded ENI with first school partnership in Dolakha" },
-    { year: "2017", event: "Launched teacher training program, trained first 25 educators" },
-    { year: "2018", event: "Expanded to 5 districts, built first computer lab" },
-    { year: "2019", event: "Reached 1,000 students, established scholarship program" },
-    { year: "2020", event: "Adapted to COVID-19 with remote learning initiatives" },
-    { year: "2021", event: "Launched digital literacy program across 15 schools" },
-    { year: "2022", event: "Opened community learning centers in 10 villages" },
-    { year: "2023", event: "Reached 2,000 students, expanded to 8 districts" },
-    { year: "2024", event: "Celebrating 2,500+ students impacted and 45 schools supported" }
+    { year: "2016", event: "Establishishment of the Organization" },
+    { year: "2016", event: "First Talkshow hosted- Nepal ma awasar nai chaina?" },
+    { year: "2017", event: "Second series of Talkshow hosted- Nepal ma awasar nai china?" },
+    { year: "2017", event: "Library Establishment at Rukum" },
+    { year: "2018", event: "Library and Computer Establishment at Jajarkot" },
+    { year: "2018", event: "Talkshow hosted- K Nepal ma Bhrastachar nai chaina?" },
+    { year: "2019", event: "Library Establishment at Dadeldhura" },
+    { year: "2020", event: "Gossip Stories- I" },
+    { year: "2021", event: "Gossip Stories- II" },
+    { year: "2022", event: "Gossip Stories- II" },
+    { year: "2023", event: "Gossip Stories- III" },
+    { year: "2024", event: "Digital Literacy across different Rural Municipalities in Nepal in collaboration with MeroSiksha" },
+    { year: "2025", event: "IT project at Kohalpur Municipality" }
   ];
 
   // const partners = [
