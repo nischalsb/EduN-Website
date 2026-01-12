@@ -7,6 +7,7 @@
     "dev": "vite",
     "dev:github": "vite --base /EduN-Website/ --port 5174",
     "build": "tsc -b && vite build",
+    "build:github": "tsc -b && vite build --base /EduN-Website/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
