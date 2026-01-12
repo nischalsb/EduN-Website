@@ -235,8 +235,68 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Legal & Transparency */}
       <section className="bg-white section-padding">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 gap-16 items-start">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="text-sm tracking-widest uppercase text-gray-500 mb-4">
+                Our Legal Status & Registration
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-light text-black mb-0 leading-tight">
+                Committed to Accountability
+              </h2>
+              <h2 className="text-4xl md:text-5xl font-light text-black mt-0 leading-tight">
+                and Compliance
+              </h2>
+
+              <div className="space-y-8">
+                <p className="text-lg text-gray-600 font-light mt-8 leading-relaxed">
+                  EduNep is a legally registered and compliant non-profit organization in Nepal, registered with relevant government authorities. Below are our official registration details:
+                </p>
+
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-lg font-medium text-black">District Administrative Office</h3>
+                    <p className="text-gray-600">Registration no: 681</p>
+                    <p className="text-gray-600">Registration date: 2073/01/13 B.S. (25 April 2016 A.D.)</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-black">Budhanilkantha Municipality</h3>
+                    <p className="text-gray-600">Registration no: 394</p>
+                    <p className="text-gray-600">Registration date: 2077/11/17 B.S. (1 March 2021 A.D.)</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-black">Social Welfare Council, Nepal</h3>
+                    <p className="text-gray-600">Registration no: 51532</p>
+                    <p className="text-gray-600">Registration date: 2077/04/13 B.S. (28 July 2020 A.D.)</p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-medium text-black">PAN</h3>
+                    <p className="text-gray-600">PAN no: 613227090</p>
+                  </div>
+                </div>
+
+                <p className="text-lg text-gray-600 font-light leading-relaxed">
+                  Registration certificates and compliance documents can be shared upon request.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="bg-gray-50 section-padding">
         <div className="container-custom">
           <motion.div
             className="text-center mb-16"
@@ -288,7 +348,7 @@ const About: React.FC = () => {
 
 
       {/* Timeline */}
-      <section className="bg-gray-50 section-padding">
+      <section className="bg-white section-padding">
         <div className="container-custom">
           <motion.div
             className="text-center mb-16"
