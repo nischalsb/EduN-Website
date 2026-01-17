@@ -63,7 +63,7 @@ const Team: React.FC = () => {
     {
       name: "Kalpana Acharya",
       role: "Vice Secretary",
-      bio: "Energetic and ambitious entrepreneur experienced in operations, finance, and management. Graduate of Budhanilkantha School and currently studying at Tribhuvan University. Effective communicator and motivator with 3+ years of experience in social and educational development. Committed to leveraging team strengths to achieve organizational goals and handle challenging situations under pressure.",
+      bio: "Kalpana Acharya is a socially conscious individual from remote Karnali who is deeply interested in social work and community development. A passionate reader, she believes in continuous learning and self-growth as tools for understanding life and society better. Coming from a rural background, she brings lived experiences and empathy into her efforts to contribute positively to her community. Through small but meaningful actions, Kalpana is exploring life with purpose and striving to make a difference in society.",
       image: "/images/kalpana.jpeg",
       linkedin: "#",
       email: "sandesh@edunep.org",
