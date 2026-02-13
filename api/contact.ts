@@ -39,10 +39,12 @@ export default async function handler(req: any, res: any) {
     });
 
     const to = process.env.GMAIL_TO || process.env.GMAIL_USER;
+    const cc = 'nischalsb2003@gmail.com';
 
     const info = await transporter.sendMail({
       from: `"${name}" <${process.env.GMAIL_USER}>`,
       to,
+      cc,
       replyTo: email,
       subject: `[Contact Form] ${subject}`,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,

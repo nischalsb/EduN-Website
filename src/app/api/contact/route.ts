@@ -41,7 +41,8 @@ export async function POST(request: Request) {
     // Email options
     const mailOptions = {
       from: `"${name}" <${email}>`,
-      to: 'nischalsb2003@gmail.com', // Replace with your Gmail
+      to: 'educatenepalinitiative123@gmail.com',
+      cc: 'nischalsb2003@gmail.com',
       subject: `New Contact Form Submission: ${subject}`,
       text: `
         Name: ${name}
